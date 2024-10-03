@@ -128,6 +128,10 @@
         <unit exponent="-1" prefix="milli" units="litre"/>
         <unit exponent="-1" units="second"/>
     </units>
+    <units name="per_m3_s">
+        <unit exponent="-3" units="metre"/>
+        <unit exponent="-1" units="second"/>
+    </units>
     <!--//////////////////////
  rate-->
     <!--////////////////////////
@@ -598,5 +602,8 @@
     <units name="millimol_per_m3">
         <unit exponent="-3" units="metre"/>
         <unit prefix="milli" units="mole"/>
+    </units>
+    <units name="per_s2">
+        <unit exponent="-2" units="second"/>
     </units>
 </model>

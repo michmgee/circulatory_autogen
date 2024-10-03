@@ -98,6 +98,7 @@
         <variable name="C_CO2_a" public_interface="out" units="dimensionless"/>
         <variable name="v_p" public_interface="out" units="m3_per_s"/>
         <variable name="v_sh" public_interface="out" units="m3_per_s"/>
+        <variable name="d_C_O2_p_dt" public_interface="out" units="Hz"/>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
@@ -280,7 +281,7 @@
                         </apply>
                         <ci>v</ci>
                     </apply>
-                    <cn cellml:units="m3_per_s">0</cn>
+                    <cn cellml:units="dimensionless">0</cn>
                 </apply>
             </apply>
             <apply>
@@ -305,7 +306,7 @@
                         </apply>
                         <ci>v</ci>
                     </apply>
-                    <cn cellml:units="m3_per_s">0</cn>
+                    <cn cellml:units="dimensionless">0</cn>
                 </apply>
             </apply>
         </math>
