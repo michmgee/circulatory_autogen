@@ -6105,12 +6105,7 @@
       {
         "port_type":"NTS_cp_freq",
         "variables":["f_NTS_cp"]
-      },
-      {
-        "port_type":"NTS_ch_freq",
-        "variables":["f_NTS_ch"]
       }
-      
     ],
     "exit_ports":
     [
@@ -6125,7 +6120,6 @@
       ["f_DMV", "Hz", "access", "variable"],
       ["f_NTS_ls", "Hz", "access", "boundary_condition"],
       ["f_NTS_cp", "Hz", "access", "boundary_condition"],
-      ["f_NTS_ch", "Hz", "access", "boundary_condition"],
       ["f_min_DMV", "Hz", "access", "constant"],
       ["f_max_DMV", "Hz", "access", "constant"],
       ["f_mid_DMV", "Hz", "access", "constant"],

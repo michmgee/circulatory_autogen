@@ -678,7 +678,6 @@ endsel;-->
         <variable name="t" public_interface="in" units="second"/>
         <variable name="f_NTS_ls" public_interface="in" units="Hz"/>
         <variable name="f_NTS_cp" public_interface="in" units="Hz"/>
-        <variable name="f_NTS_ch" public_interface="in" units="Hz"/>
         <variable name="f_min_DMV" public_interface="in" units="Hz"/>
         <variable name="f_max_DMV" public_interface="in" units="Hz"/>
         <variable name="f_mid_DMV" public_interface="in" units="Hz"/>
@@ -708,7 +707,6 @@ endsel;-->
                                         <plus/>
                                         <ci>f_NTS_ls</ci>
                                         <ci>f_NTS_cp</ci>
-                                        <ci>f_NTS_ch</ci>
                                     </apply>
                                     <ci>f_mid_DMV</ci>
                                 </apply>
