@@ -2279,6 +2279,10 @@
       {
         "port_type":"flow_port",
         "variables":["v"]
+      },
+      {
+        "port_type":"pressure_port",
+        "variables":["u_out"]
       }
     ],
     "variables_and_units":

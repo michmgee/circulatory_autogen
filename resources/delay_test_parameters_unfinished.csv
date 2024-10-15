@@ -1,0 +1,3 @@
+variable_name,units,value,data_reference
+delay_delay,second,EMPTY_MUST_BE_FILLED,EMPTY_MUST_BE_FILLED
+k_e_delay,per_s,EMPTY_MUST_BE_FILLED,EMPTY_MUST_BE_FILLED

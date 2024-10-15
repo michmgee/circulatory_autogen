@@ -1,5 +1,5 @@
 [
-  { "variable": "ascending_aorta_A/u",
+  { "variable": "aortic_root/u",
     "data_type": "constant",
     "unit": "J_per_m3",
     "weight": 1.0,
@@ -7,7 +7,7 @@
     "value": 12000,
     "std": 1000
   },
-  { "variable": "ascending_aorta_A/u",
+  { "variable": "aortic_root/u",
     "data_type": "constant",
     "unit": "J_per_m3",
     "weight": 1.0,
@@ -15,7 +15,7 @@
     "value": 16000,
     "std": 14000
   },
-  { "variable": "ascending_aorta_A/u",
+  { "variable": "aortic_root/u",
     "data_type": "constant",
     "unit": "J_per_m3",
     "weight": 1.0,
@@ -23,7 +23,7 @@
     "value": 10600,
     "std": 1000
   },
-  { "variable": "ascending_aorta_A/v",
+  { "variable": "aortic_root/v",
     "data_type": "constant",
     "unit": "m3_per_s",
     "weight": 1.0,

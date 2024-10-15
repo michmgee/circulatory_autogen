@@ -4,5 +4,6 @@ if [[ $# -eq 0 ]] ; then
 fi
 source opencor_pythonshell_path.sh
 ./run_autogeneration.sh
-mpiexec -n $1 ${opencor_pythonshell_path} ../src/scripts/param_id_run_script.py
+pyinstaller --onefile --copy-metadata pyproj "param_id_run_script.py"
+/lustre/ogunnaike/sw/opencor/0.7.1/pythonshell ../src/scripts/param_id_run_script.py
 
