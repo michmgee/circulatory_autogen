@@ -60,7 +60,7 @@ q_lv_us,m3,5.0e-6,Korakianitis_2006_Table_1
 q_ra_init,m3,4.0e-6,Korakianitis_2006_Table_1
 q_rv_init,m3,10.0e-6,Korakianitis_2006_Table_1
 q_la_init,m3,4.0e-6,Korakianitis_2006_Table_1
-q_lv_init,m3,15.0e-4,to_be_identified
+q_lv_init,m3,1.55E-03,06_11_2024_identified
 T_ac,second,0.17,Liang_2009_Table_2
 T_ar,second,0.17,Liang_2009_Table_2
 t_astart,second,0.8,Liang_2009_Table_2
@@ -73,8 +73,8 @@ E_rv_A,J_per_m6,73.315e+6,Liang_2009_Table_2
 E_rv_B,J_per_m6,6.665e+6,Liang_2009_Table_2
 E_la_A,J_per_m6,9.331e+6,Liang_2009_Table_2
 E_la_B,J_per_m6,11.997e+6,Liang_2009_Table_2
-E_lv_A,J_per_m6,3.1744e+08,15_07_2022_identified
-E_lv_B,J_per_m6,10.664e+6,Liang_2009_Table_2
+E_lv_A,J_per_m6,7.95E+07,06_11_2024_identified
+E_lv_B,J_per_m6,1.31E+08,06_11_2024_identified
 K_vo_trv,m3_per_Js,0.3,Mynard_2012
 K_vo_puv,m3_per_Js,0.2,Mynard_2012
 K_vo_miv,m3_per_Js,0.3,Mynard_2012

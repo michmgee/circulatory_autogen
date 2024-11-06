@@ -1,4 +1,4 @@
 vessel_name,                  param_name,       param_type,  min,        max,     name_for_plotting
 heart,E_lv_A,const,7.10E+07,3.20E+08,E_{lv_A}
 heart,E_lv_B,const,7.10E+07,3.20E+08,E_{lv_B}
-heart,q_LV_init,const,1.50E-04,0.015,q_{LV_init}
+heart,q_lv_init,const,1.50E-04,0.015,q_{LV_init}

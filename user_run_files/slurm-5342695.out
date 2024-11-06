@@ -1,0 +1,3813 @@
+ERROR:  no previous session on record, unable to roll back
+Adding package `opencor/0.7.1` to your environment
+Adding package `openmpi/4.1.0` to your environment
+./run_autogeneration.sh: line 1: opencor_pythonshell_path.sh: No such file or directory
+Generating model files at ../src/scripts/../../generated_models/control_parasymp
+Generating CellML file control_parasymp_units.cellml
+Generating CellML file control_parasymp.cellml
+writing units mapping
+writing imports
+writing vessel mappings
+writing environment to sum venous input flows
+writing variable access
+writing mappings between computational environment and modules
+writing mappings between constant params
+writing writing time mappings between environment and modules
+Generating CellML file control_parasymp_parameters.cellml
+Generating modules file control_parasymp_modules.cellml
+Model generation complete.
+Checking Status of Model
+The method "parse_model" found 1 issues:
+    - Given model is a CellML 1.1 model, the parser will try to represent this model in CellML 2.0.
+Recorded 1 issues:
+Issue 0 is a MESSAGE:
+    Description: Given model is a CellML 1.1 model, the parser will try to represent this model in CellML 2.0.
+    More information is available at: ?issue=
+    Stored item type: model
+
+The method "resolve_imports" found 3 issues:
+    - Given model is a CellML 1.1 model, the parser will try to represent this model in CellML 2.0.
+    - Given model is a CellML 1.1 model, the parser will try to represent this model in CellML 2.0.
+    - Given model is a CellML 1.1 model, the parser will try to represent this model in CellML 2.0.
+no unresolved imports.
+Recorded 40 issues:
+Issue 0 is a WARNING:
+    Description: The units in 'C_O2_sat-Hgb*1.34e-3-P_O2_a*0.003/100.0' in 'C_O2_sat-Hgb*1.34e-3-P_O2_a*0.003/100.0 >= 0.0' in '(C_O2_sat-Hgb*1.34e-3-P_O2_a*0.003/100.0 >= 0.0)?P_O2_a*0.003/100.0' in '(C_O2_sat-Hgb*1.34e-3-P_O2_a*0.003/100.0 >= 0.0)?P_O2_a*0.003/100.0:C_O2_sat-Hgb*1.34e-3' in equation 'C_O2_a_diss = (C_O2_sat-Hgb*1.34e-3-P_O2_a*0.003/100.0 >= 0.0)?P_O2_a*0.003/100.0:C_O2_sat-Hgb*1.34e-3' in component 'arterial_chemoreceptor_module' are not equivalent. 'C_O2_sat-Hgb*1.34e-3' is 'dimensionless' while 'P_O2_a*0.003/100.0' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 1 is a WARNING:
+    Description: The units in '-f_ls+G_al*V_lung' in '(-f_ls+G_al*V_lung)/tau_lung' in equation 'df_ls/dt = (-f_ls+G_al*V_lung)/tau_lung' in component 'lung_stretch_module' are not equivalent. '-f_ls' is in 'Hz' (i.e. 'second^-1') while 'G_al*V_lung' is in 'm3 x per_ml_s' (i.e. '10^6 x second^-1').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 2 is a WARNING:
+    Description: The units in 'f_input_LCN_sum >= 0.0' in '(f_input_LCN_sum >= 0.0)?f_input_LCN_sum' in '(f_input_LCN_sum >= 0.0)?f_input_LCN_sum:0.0' in equation 'f_input_LCN = (f_input_LCN_sum >= 0.0)?f_input_LCN_sum:0.0' in component 'LCN_module' are not equivalent. 'f_input_LCN_sum' is in 'Hz' (i.e. 'second^-1') while '0.0' is 'dimensionless'.
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 3 is a WARNING:
+    Description: The unit of 'f_input_LCN_sum >= 0.0' in '(f_input_LCN_sum >= 0.0)?f_input_LCN_sum' in '(f_input_LCN_sum >= 0.0)?f_input_LCN_sum:0.0' in equation 'f_input_LCN = (f_input_LCN_sum >= 0.0)?f_input_LCN_sum:0.0' in component 'LCN_module' is not dimensionless. 'f_input_LCN_sum >= 0.0' is in 'Hz' (i.e. 'second^-1').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 4 is a WARNING:
+    Description: The unit of 'k_es*(W_bs*f_ab+W_cs*f_apc)' in 'exp(k_es*(W_bs*f_ab+W_cs*f_apc))' in '(f_es_0-f_es_inf)*exp(k_es*(W_bs*f_ab+W_cs*f_apc))' in 'f_es_inf+(f_es_0-f_es_inf)*exp(k_es*(W_bs*f_ab+W_cs*f_apc))' in equation 'f_s_premax = f_es_inf+(f_es_0-f_es_inf)*exp(k_es*(W_bs*f_ab+W_cs*f_apc))' in component 'sympathetic_efferent_module' is not dimensionless. 'k_es*(W_bs*f_ab+W_cs*f_apc)' is in 'Hz^2' (i.e. 'second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 5 is a WARNING:
+    Description: The unit of 'f_esh-f_es_min+1.0' in 'ln(f_esh-f_es_min+1.0)' in '-inv_G_Es*ln(f_esh-f_es_min+1.0)' in '(f_esh >= f_es_min)?-inv_G_Es*ln(f_esh-f_es_min+1.0)' in '(f_esh >= f_es_min)?-inv_G_Es*ln(f_esh-f_es_min+1.0):0.0' in equation 'inv_sigma_Es = (f_esh >= f_es_min)?-inv_G_Es*ln(f_esh-f_es_min+1.0):0.0' in component 'lv_elastance_effector_module' is not dimensionless. 'f_esh-f_es_min+1.0' is in 'Hz' (i.e. 'second^-1').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 6 is a WARNING:
+    Description: The unit of 'f_esh-f_es_min+1.0' in 'ln(f_esh-f_es_min+1.0)' in '-inv_G_Es*ln(f_esh-f_es_min+1.0)' in '(f_esh >= f_es_min)?-inv_G_Es*ln(f_esh-f_es_min+1.0)' in '(f_esh >= f_es_min)?-inv_G_Es*ln(f_esh-f_es_min+1.0):0.0' in equation 'inv_sigma_Es = (f_esh >= f_es_min)?-inv_G_Es*ln(f_esh-f_es_min+1.0):0.0' in component 'rv_elastance_effector_module' is not dimensionless. 'f_esh-f_es_min+1.0' is in 'Hz' (i.e. 'second^-1').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 7 is a WARNING:
+    Description: The units in 'sigma_Tv = G_Tv*f_v' in component 'heart_period_effector_module' are not equivalent. 'sigma_Tv' is in 'second' while 'G_Tv*f_v' is in 'Hz x second'.
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 8 is a WARNING:
+    Description: The unit of 'P_CO2_a' in 'ln(P_CO2_a)' in 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'middle_cerebral_L_LC_module' is not dimensionless. 'P_CO2_a' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 9 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'middle_cerebral_L_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 10 is a WARNING:
+    Description: The unit of 'P_CO2_a_nom' in 'ln(P_CO2_a_nom)' in 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'middle_cerebral_L_LC_module' is not dimensionless. 'P_CO2_a_nom' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 11 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'middle_cerebral_L_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a_nom)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 12 is a WARNING:
+    Description: The unit of 'P_CO2_a' in 'ln(P_CO2_a)' in 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'middle_cerebral_R_LC_module' is not dimensionless. 'P_CO2_a' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 13 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'middle_cerebral_R_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 14 is a WARNING:
+    Description: The unit of 'P_CO2_a_nom' in 'ln(P_CO2_a_nom)' in 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'middle_cerebral_R_LC_module' is not dimensionless. 'P_CO2_a_nom' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 15 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'middle_cerebral_R_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a_nom)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 16 is a WARNING:
+    Description: The unit of 'P_CO2_a' in 'ln(P_CO2_a)' in 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'anterior_cerebral_L_LC_module' is not dimensionless. 'P_CO2_a' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 17 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'anterior_cerebral_L_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 18 is a WARNING:
+    Description: The unit of 'P_CO2_a_nom' in 'ln(P_CO2_a_nom)' in 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'anterior_cerebral_L_LC_module' is not dimensionless. 'P_CO2_a_nom' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 19 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'anterior_cerebral_L_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a_nom)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 20 is a WARNING:
+    Description: The unit of 'P_CO2_a' in 'ln(P_CO2_a)' in 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'anterior_cerebral_R_LC_module' is not dimensionless. 'P_CO2_a' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 21 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'anterior_cerebral_R_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 22 is a WARNING:
+    Description: The unit of 'P_CO2_a_nom' in 'ln(P_CO2_a_nom)' in 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'anterior_cerebral_R_LC_module' is not dimensionless. 'P_CO2_a_nom' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 23 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'anterior_cerebral_R_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a_nom)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 24 is a WARNING:
+    Description: The unit of 'P_CO2_a' in 'ln(P_CO2_a)' in 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'posterior_cerebral_L_LC_module' is not dimensionless. 'P_CO2_a' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 25 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'posterior_cerebral_L_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 26 is a WARNING:
+    Description: The unit of 'P_CO2_a_nom' in 'ln(P_CO2_a_nom)' in 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'posterior_cerebral_L_LC_module' is not dimensionless. 'P_CO2_a_nom' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 27 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'posterior_cerebral_L_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a_nom)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 28 is a WARNING:
+    Description: The unit of 'P_CO2_a' in 'ln(P_CO2_a)' in 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'posterior_cerebral_R_LC_module' is not dimensionless. 'P_CO2_a' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 29 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'posterior_cerebral_R_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 30 is a WARNING:
+    Description: The unit of 'P_CO2_a_nom' in 'ln(P_CO2_a_nom)' in 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'posterior_cerebral_R_LC_module' is not dimensionless. 'P_CO2_a_nom' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 31 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'posterior_cerebral_R_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a_nom)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 32 is a WARNING:
+    Description: The unit of 'P_CO2_a' in 'ln(P_CO2_a)' in 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'external_carotid_L_LC_module' is not dimensionless. 'P_CO2_a' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 33 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'external_carotid_L_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 34 is a WARNING:
+    Description: The unit of 'P_CO2_a_nom' in 'ln(P_CO2_a_nom)' in 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'external_carotid_L_LC_module' is not dimensionless. 'P_CO2_a_nom' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 35 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'external_carotid_L_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a_nom)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 36 is a WARNING:
+    Description: The unit of 'P_CO2_a' in 'ln(P_CO2_a)' in 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'external_carotid_R_LC_module' is not dimensionless. 'P_CO2_a' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 37 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a)' in 'exp(D_b_lc*ln(P_CO2_a))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'external_carotid_R_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 38 is a WARNING:
+    Description: The unit of 'P_CO2_a_nom' in 'ln(P_CO2_a_nom)' in 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'external_carotid_R_LC_module' is not dimensionless. 'P_CO2_a_nom' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+Issue 39 is a WARNING:
+    Description: The unit of 'D_b_lc*ln(P_CO2_a_nom)' in 'exp(D_b_lc*ln(P_CO2_a_nom))' in 'C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in '1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))' in 'B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in 'A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom)))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))' in '(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in equation 'phi_P_CO2_a = (A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a))))/(A_b_lc+B_b_lc/(1.0+C_b_lc*exp(D_b_lc*ln(P_CO2_a_nom))))-1.0' in component 'external_carotid_R_LC_module' is not dimensionless. 'D_b_lc*ln(P_CO2_a_nom)' is in 'J_per_m3' (i.e. 'kilogram x metre^-1 x second^-2').
+    More information is available at: https://libcellml.org/documentation/guides/latest/runtime_codes/index?issue=ANALYSER_UNITS
+    Stored item type: undefined
+
+2
+WARNING model is has some issues, see above. The model might still run with some of the above issuesbut it is recommended to fix them
+Testing to see if model opens in OpenCOR
+Model generation has been successful.
+[r1n17:28191] mca_base_component_repository_open: unable to open mca_op_avx: /opt/shared/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[r1n17:28178] mca_base_component_repository_open: unable to open mca_op_avx: /opt/shared/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[r1n17:28192] mca_base_component_repository_open: unable to open mca_op_avx: /opt/shared/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[r1n17:28170] mca_base_component_repository_open: unable to open mca_op_avx: /opt/shared/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[r1n17:28165] mca_base_component_repository_open: unable to open mca_op_avx: /opt/shared/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[r1n17:28177] mca_base_component_repository_open: unable to open mca_op_avx: /opt/shared/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[r1n17:28186] mca_base_component_repository_open: unable to open mca_op_avx: /opt/shared/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[r1n17:28196] mca_base_component_repository_open: unable to open mca_op_avx: /opt/shared/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+starting script for rank = 1
+starting script for rank = 3
+starting script for rank = 0
+starting script for rank = 5
+starting script for rank = 2
+starting script for rank = 7
+starting script for rank = 4
+starting script for rank = 6
+constant data types plot type defaults to horizontal lines change "plot_type" in obs_data.json to change this
+constant data types plot type defaults to horizontal lines change "plot_type" in obs_data.json to change this
+constant data types plot type defaults to horizontal lines change "plot_type" in obs_data.json to change this
+constant data types plot type defaults to horizontal lines change "plot_type" in obs_data.json to change this
+constant data types plot type defaults to horizontal lines change "plot_type" in obs_data.json to change this
+constant data types plot type defaults to horizontal lines change "plot_type" in obs_data.json to change this
+constant data types plot type defaults to horizontal lines change "plot_type" in obs_data.json to change this
+constant data types plot type defaults to horizontal lines change "plot_type" in obs_data.json to change this
+starting param id run for rank = 1 process
+starting param id run for rank = 6 process
+starting param id run for rank = 7 process
+starting param id run for rank = 5 process
+starting param id run for rank = 4 process
+starting param id run for rank = 2 process
+starting param id run for rank = 0 process
+Running genetic algorithm with a population size of 744,
+and a maximum number of generations of 6
+generation num: 1
+population per processor is
+[93 93 93 93 93 93 93 93]
+starting param id run for rank = 3 process
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+simulation failed with params...
+simulation failed with params...
+[1.29278461e+08 2.55153075e+08 1.03552835e-02]
+[2.19863183e+08 3.01210434e+08 1.29069069e-02]
+... choosing a new random point
+... choosing a new random point
+simulation failed with params...
+[9.42115444e+07 1.30009771e+08 1.18411727e-02]
+... choosing a new random point
+simulation failed with params...
+[1.62698641e+08 3.09056132e+08 8.12175327e-03]
+... choosing a new random point
+simulation failed with params...
+[7.58266072e+07 1.21921817e+08 1.37817296e-02]
+... choosing a new random point
+simulation failed with params...
+[2.60151614e+08 1.20527175e+08 5.91391433e-03]
+... choosing a new random point
+simulation failed with params...
+[1.78852435e+08 2.76124129e+08 4.40226491e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.18324285e+08 1.66286681e+08 1.12490814e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.84265842e+08 1.06376431e+08 1.05175962e-02]
+... choosing a new random point
+simulation failed with params...
+[1.65535183e+08 1.98780347e+08 1.46309717e-02]
+... choosing a new random point
+simulation failed with params...
+[8.79968262e+07 1.82151163e+08 8.68563148e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.30554776e+08 3.08251740e+08 4.18029500e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.83277138e+08 9.83310705e+07 1.21641730e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.50909922e+08 2.50994575e+08 1.24023401e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.17752761e+08 1.29552051e+08 1.35875645e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.74179431e+08 2.34606616e+08 1.21442096e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.09153706e+08 1.20312622e+08 7.98193844e-03]
+... choosing a new random point
+simulation failed with params...
+[2.32294955e+08 2.25368826e+08 1.32386166e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.17285004e+08 2.23391782e+08 1.34054616e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.61060142e+08 1.05872797e+08 1.22642694e-02]
+... choosing a new random point
+simulation failed with params...
+[2.94156953e+08 1.17229906e+08 8.13130642e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.79775123e+08 2.42762041e+08 1.27737088e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.18640458e+08 2.54612691e+08 9.33123383e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.18602507e+08 7.41150192e+07 1.27644543e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.90413498e+08 9.80760868e+07 8.45738421e-03]
+... choosing a new random point
+simulation failed with params...
+[1.38224828e+08 1.54073069e+08 9.47089395e-03]
+... choosing a new random point
+simulation failed with params...
+[1.76613063e+08 1.50047213e+08 1.26300003e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.04482911e+08 7.77585126e+07 6.56587674e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.84451474e+08 3.15055403e+08 1.46591457e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.02366843e+08 2.57614916e+08 1.35260731e-02]
+... choosing a new random point
+ this generation is 3% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.05355823e+08 9.81158438e+07 4.67286371e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.15262565e+08 2.40129420e+08 1.40091615e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.50284169e+08 1.38408817e+08 9.42078898e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.64697438e+08 1.38326796e+08 7.76570748e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.60251753e+08 2.73361882e+08 1.49260275e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.02917983e+08 2.97986682e+08 6.32951235e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.56208597e+08 2.74764428e+08 9.05243263e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.77965125e+08 2.36568952e+08 4.28743297e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.09724118e+07 2.76412533e+08 5.67597421e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.94617548e+08 2.16316193e+08 1.48180654e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.63575826e+08 7.35109725e+07 4.95533057e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.15864291e+08 9.38897867e+07 5.41994069e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.97772698e+08 7.67832760e+07 4.83510402e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.51519375e+08 1.29070146e+08 8.69872471e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.35425297e+08 2.25790908e+08 5.93677131e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.00533430e+08 2.99523172e+08 4.77595866e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.21275733e+08 1.43217045e+08 6.82846508e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.45004481e+07 2.15246571e+08 1.41065396e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.32766236e+08 1.81261614e+08 5.67188031e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.97077532e+08 1.78692586e+08 4.72453376e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.46349883e+08 2.71547028e+08 4.30227717e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.79359814e+08 7.40635881e+07 7.37892400e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.17695271e+08 2.51748303e+08 1.39950073e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.70484768e+08 1.30026026e+08 9.08694890e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.53885558e+08 1.29691996e+08 1.18363102e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.69901950e+08 7.39123652e+07 5.74966517e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.74138427e+08 2.14395945e+08 5.55055963e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.12437305e+08 1.17230560e+08 1.20150676e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.17902073e+08 1.97768961e+08 6.08411755e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.30998622e+08 2.21679143e+08 1.12028553e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.70779415e+08 1.87406028e+08 6.35875216e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.59657982e+07 7.39668975e+07 1.12609727e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.21602150e+08 1.88472497e+08 7.93373165e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.65596652e+08 2.19626740e+08 1.17244894e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.51928371e+08 3.15731106e+08 4.95327335e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.50956692e+08 1.36006410e+08 5.18625811e-03]
+... choosing a new random point
+ this generation is 10% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.24447715e+08 2.77229926e+08 1.14274192e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.83521757e+08 2.57691925e+08 9.49202803e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.14622814e+08 2.25334407e+08 7.88595244e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.69725488e+08 1.05428802e+08 1.34333597e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.02893138e+08 1.24613868e+08 1.02862790e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.04722027e+08 1.27270268e+08 8.87632980e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.79845188e+08 2.83882092e+08 1.04113888e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.98874493e+08 2.25080012e+08 5.71972858e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.50856049e+08 1.21120335e+08 6.57657317e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.72789482e+07 2.17013688e+08 8.28626107e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.72753381e+07 2.69793615e+08 8.95640723e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.29263321e+08 1.61557739e+08 1.03027624e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.71136492e+08 1.91147440e+08 1.10600216e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.44103388e+08 2.46611512e+08 5.94291203e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.28065211e+08 2.37675428e+08 8.95436133e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.54535590e+08 2.17893395e+08 8.11758833e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.58948049e+08 2.58696549e+08 1.33524496e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.47996399e+08 2.52050060e+08 1.09402523e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.59112655e+07 3.02263463e+08 9.30200506e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.19098315e+08 1.84326212e+08 1.46637080e-02]
+... choosing a new random point
+ this generation is 11% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.30417834e+08 2.19307968e+08 1.30829900e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.28906593e+08 2.00446511e+08 8.64915498e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.68362704e+08 7.62094478e+07 6.65858040e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.51710052e+08 1.71013250e+08 1.38672545e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.41443061e+08 1.12531319e+08 8.09781344e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.58952296e+08 3.18704338e+08 1.43175514e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.96759565e+07 2.15064268e+08 9.17776864e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.65614633e+08 2.58280927e+08 1.49440953e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.57142440e+08 1.73070373e+08 1.20334399e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.85239398e+08 1.69129508e+08 7.40998715e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.18669470e+07 9.96381034e+07 1.15562362e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.83638365e+07 2.22426003e+08 1.17513503e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.52179861e+08 2.43495968e+08 6.31180448e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.07348831e+08 9.26488565e+07 1.29980808e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.20472652e+08 2.73345607e+08 1.32121818e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.08231040e+08 2.05319479e+08 4.97005435e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.14102444e+08 1.94465519e+08 1.26299376e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.72704139e+08 2.70802384e+08 1.41267984e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.19613615e+08 1.50209714e+08 1.08471210e-02]
+... choosing a new random point
+ this generation is 14% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.64648350e+08 1.04136054e+08 1.32309897e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.82380791e+08 1.28476962e+08 8.49088278e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.30342325e+08 2.89897590e+08 1.41729293e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.65101042e+08 2.45131041e+08 1.23818070e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.32537894e+08 2.50254347e+08 1.39583506e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.09442678e+08 3.09521830e+08 6.75131809e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.37979811e+08 9.23536847e+07 1.28969115e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.91371172e+08 1.24858222e+08 6.95021438e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.03125756e+08 1.59274158e+08 6.14730086e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.44450983e+08 1.56869585e+08 1.05515844e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.58693618e+08 2.18928263e+08 1.24614394e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.82481572e+07 1.35963117e+08 8.64198015e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.21386772e+08 2.04644787e+08 6.48706695e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.25431212e+08 2.46603779e+08 5.57673241e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.56136641e+08 1.63691606e+08 1.01565522e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.20859175e+08 9.41337299e+07 8.15110198e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.75142997e+08 1.90950408e+08 8.51384020e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.82600094e+08 2.73351426e+08 1.20921147e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.88275101e+08 1.68170291e+08 9.35854583e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.18038300e+08 1.51128096e+08 7.30863760e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.35592353e+08 2.88007778e+08 1.44610244e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.15003011e+08 1.10635302e+08 5.56773292e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.70519218e+08 2.74125113e+08 1.24837542e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.20771177e+08 2.56367982e+08 1.11682507e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.88468096e+08 2.02355009e+08 5.61113171e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.32786983e+08 1.85847294e+08 7.13817665e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.93452854e+08 1.52820448e+08 1.20987990e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.60167553e+08 9.99231681e+07 6.72683964e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.34122676e+08 2.46756564e+08 1.36576302e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.01851918e+08 3.08234267e+08 1.39193329e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.63492261e+07 1.14146794e+08 6.82633399e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.33962457e+08 1.81632244e+08 4.50150066e-03]
+... choosing a new random point
+ this generation is 17% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.23225130e+08 7.49047048e+07 1.11769945e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.87344707e+08 2.21753061e+08 9.62290047e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.42913246e+08 9.20037286e+07 1.21223736e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.09882169e+08 1.72456933e+08 1.20119752e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.03940323e+08 1.88657267e+08 1.15059654e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.66120717e+08 1.50141586e+08 1.06748462e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.17023484e+08 7.46539882e+07 8.84725061e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.15466416e+08 2.64383665e+08 6.94196135e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.28466848e+08 9.18276698e+07 1.14788803e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.22872912e+07 1.39504542e+08 6.33868874e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.79629618e+08 3.19348248e+08 3.90402846e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.68214892e+08 7.52608698e+07 8.32525725e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.21268963e+08 1.62622964e+08 5.27012538e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.23771213e+08 1.32708618e+08 1.13490814e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.09512315e+08 1.43443623e+08 1.41111221e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.55877509e+08 1.61128360e+08 8.19315337e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.29557031e+07 9.24493476e+07 8.62993937e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.98687519e+07 1.52542843e+08 8.56644077e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.28761910e+08 1.06343534e+08 1.06207749e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.42447388e+08 2.29845931e+08 1.14403737e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.35465526e+08 8.81234895e+07 1.07175791e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.75298885e+07 1.18015356e+08 7.92455943e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.58950362e+08 2.26246789e+08 1.24673044e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.17788192e+08 3.16710217e+08 1.44714037e-02]
+... choosing a new random point
+ this generation is 27% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.09799066e+08 1.05777814e+08 1.44652925e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.66808050e+07 2.23550176e+08 7.47617051e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.66029533e+08 1.93284714e+08 1.13764414e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.07608238e+08 1.77532054e+08 8.04548343e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.95446878e+08 2.53217493e+08 4.82815739e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.77437951e+08 1.51970944e+08 1.17252696e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.18085231e+08 2.97941101e+08 1.43261865e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.58825977e+08 1.63289210e+08 7.24168698e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.95419782e+07 3.08092605e+08 4.10769132e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.98640826e+08 2.75736536e+08 9.25428050e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.26212442e+07 1.95460214e+08 4.69562644e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.43594471e+07 2.69498912e+08 8.58520812e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.12728926e+08 1.87012013e+08 1.46294177e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.38068995e+08 1.35520121e+08 6.62686422e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.16936831e+08 1.15584469e+08 5.84954138e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.87784951e+08 3.10251575e+08 8.69956834e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.08180654e+08 1.39395437e+08 7.80132676e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.15659653e+08 2.46503263e+08 1.47541481e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.17026804e+08 1.73191243e+08 8.52004155e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.11158984e+08 1.74486505e+08 1.35641074e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.99436479e+08 1.06511851e+08 7.77913605e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.90324185e+08 1.41611506e+08 1.13250146e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.03587478e+08 1.91276100e+08 8.92323222e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.66727092e+08 1.99982650e+08 1.11266323e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.63762384e+08 8.35340556e+07 1.31621394e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.00693028e+08 1.38981591e+08 9.17603820e-03]
+... choosing a new random point
+ this generation is 30% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.51629849e+08 2.91871744e+08 8.08181266e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.16887790e+08 1.01034029e+08 1.47971864e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.85448696e+08 2.35723579e+08 8.68165569e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.54701579e+07 2.59898006e+08 1.15051237e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.08905274e+08 7.25405978e+07 1.31745779e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.05069591e+08 1.96561248e+08 1.01540926e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.82120203e+08 8.15905788e+07 9.06297934e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.76050879e+08 1.60571912e+08 1.01433921e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.87291247e+08 1.81257341e+08 1.09057690e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.25256878e+08 2.95168832e+08 1.38232680e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.70292065e+07 8.21804136e+07 1.00100087e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.11141347e+08 1.74624631e+08 7.49651084e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.79885072e+08 2.02481122e+08 7.95302521e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.08834102e+08 1.41606209e+08 6.13073802e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.07861442e+07 2.54273852e+08 1.38527757e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.08365570e+08 1.03324170e+08 9.99434045e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.79539041e+08 1.88655889e+08 1.32949386e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.07785494e+07 2.78056234e+08 8.31264558e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.60498705e+08 2.73376145e+08 1.18166935e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.92195288e+08 2.52267294e+08 1.13175174e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.07124665e+08 2.00609307e+08 8.52418318e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.73517655e+08 2.53936317e+08 1.08915761e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.62386739e+08 2.40307349e+08 4.20943642e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.65693270e+08 3.17867130e+08 1.33449448e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.11332255e+08 1.50170097e+08 7.35583737e-03]
+... choosing a new random point
+ this generation is 35% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.48105473e+08 2.48561384e+08 6.76949877e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.52613082e+08 2.93451314e+08 5.73602322e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.88258596e+07 1.72299674e+08 1.08226217e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.95880771e+08 1.73562378e+08 1.31443392e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.88910729e+08 2.60186331e+08 6.12571609e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.68364935e+08 2.60399472e+08 1.36999084e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.42665262e+08 2.20156385e+08 5.54542235e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.30434578e+08 1.92243447e+08 1.38834771e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.24539996e+08 1.60898324e+08 1.26980775e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.86899750e+07 1.81174179e+08 5.09230213e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.00815069e+08 1.67405805e+08 7.56842012e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.24175034e+07 3.07415629e+08 1.38524442e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.40008033e+08 1.12305938e+08 1.15494819e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.87451414e+08 2.38790387e+08 8.54941648e-03]
+... choosing a new random point
+ this generation is 37% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.59935212e+08 2.71357360e+08 6.09972240e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.54868694e+08 2.00835239e+08 6.51913220e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.39392405e+08 1.73133799e+08 1.06767424e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.62285044e+07 1.29087696e+08 8.89314494e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.83193393e+07 1.71787011e+08 1.35112159e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.48895708e+07 2.55141523e+08 7.29405516e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.69393634e+08 2.90874107e+08 4.67105311e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.50475602e+08 1.63274414e+08 1.42486500e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.40576234e+08 1.11287602e+08 1.18361495e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.88966674e+08 1.67623926e+08 1.30643580e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.60013938e+08 1.28959296e+08 7.73564059e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.18846439e+08 2.83485630e+08 4.34861508e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.50385601e+08 2.49781790e+08 1.37528418e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.09677968e+08 1.83817210e+08 9.13941986e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.89239263e+08 3.11587254e+08 7.42179102e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.52346626e+08 2.26661778e+08 9.40120839e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.29047448e+08 2.74690898e+08 8.84092300e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.12587101e+08 1.25222440e+08 1.41671581e-02]
+... choosing a new random point
+simulation failed with params...
+[3.18282092e+08 2.12926556e+08 8.70893109e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.71609099e+08 1.78892991e+08 6.33328686e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.59893284e+08 1.28840011e+08 1.41880257e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.23155063e+08 3.05814520e+08 5.72748322e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.18334214e+08 3.00917290e+08 4.18924603e-03]
+... choosing a new random point
+ this generation is 38% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.09623650e+08 1.68895802e+08 1.38188231e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.80225004e+08 1.22382120e+08 1.49050353e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.50856589e+07 1.37339870e+08 7.12706446e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.94822842e+08 2.82564398e+08 7.13247612e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.23182242e+08 2.22731354e+08 9.24087116e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.99864290e+08 9.30492842e+07 1.29160680e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.81424258e+07 2.84523133e+08 7.80782109e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.38443993e+08 2.79359777e+08 1.39049733e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.85050035e+08 7.12832876e+07 5.41462035e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.62754234e+08 1.27551439e+08 9.39923519e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.29267952e+07 2.68377672e+08 1.48811743e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.17120286e+08 2.55757124e+08 1.36195795e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.93337624e+08 1.10140944e+08 1.30065280e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.07091078e+08 1.25824201e+08 1.49400418e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.70779101e+07 2.28877259e+08 1.28149089e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.86501428e+08 2.56948063e+08 1.17501036e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.93909588e+08 2.91435815e+08 1.45803631e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.50554564e+08 1.46392077e+08 7.60372342e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.42170384e+08 2.31991642e+08 1.40055580e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.70771551e+08 2.40296139e+08 9.92543495e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.16983029e+08 1.94252560e+08 7.23783145e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.03632146e+08 1.57777128e+08 5.11647670e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.21945770e+07 2.01852234e+08 1.14481196e-02]
+... choosing a new random point
+ this generation is 44% done
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.41565519e+08 7.51958595e+07 9.48889150e-03]
+... choosing a new random point
+simulation failed with params...
+[1.82874960e+08 1.39417854e+08 1.08589421e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.80580837e+08 1.88026922e+08 1.09139632e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.36994104e+08 2.07536221e+08 5.86655757e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.18816527e+08 2.94554095e+08 7.44610457e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.13155042e+08 2.81979863e+08 4.57631340e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.96496850e+08 2.53236243e+08 9.58910052e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.52843580e+08 1.70681255e+08 7.61530853e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.80668177e+08 2.85602605e+08 1.21067487e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.57017075e+07 1.34631816e+08 7.38303992e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.94850739e+08 2.46525267e+08 8.89721281e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.58771137e+08 1.50947605e+08 7.28757228e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.77101222e+08 7.61713082e+07 1.31413629e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.29197723e+08 1.02759544e+08 5.78124939e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.47738542e+08 2.10020933e+08 9.74599245e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.73945721e+08 2.71302305e+08 1.44789575e-02]
+... choosing a new random point
+ this generation is 48% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.56420046e+08 1.73457222e+08 6.58471231e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.97216145e+08 1.36706212e+08 1.15497247e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.37784601e+08 3.10295991e+08 1.07624412e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.43086964e+08 3.12680317e+08 6.40986208e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.75272395e+08 2.12017230e+08 4.53944294e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.70816000e+08 9.69226266e+07 9.84802364e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.86708555e+08 2.11060665e+08 1.18589601e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.27802939e+07 2.79836162e+08 1.05107181e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.17120669e+08 1.42187966e+08 9.44751820e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.04331710e+08 1.79558131e+08 1.28851198e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.10802400e+08 2.73459632e+08 7.72477299e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.77787864e+07 1.21566687e+08 1.31092425e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.40591234e+07 1.22195614e+08 8.27745598e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.50278682e+08 1.21752206e+08 1.29367802e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.35046847e+08 2.83566144e+08 9.70104942e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.29996061e+08 1.37446275e+08 1.03245321e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.59072527e+08 1.78144135e+08 1.32059028e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.53379242e+07 2.17059421e+08 8.27896816e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.58892484e+08 1.82437087e+08 1.36610491e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.11912193e+07 1.48040796e+08 1.17176792e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.06705068e+08 2.89212525e+08 1.16470511e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.29548441e+08 1.33015111e+08 1.24713542e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.95351686e+08 2.14282617e+08 7.15001203e-03]
+... choosing a new random point
+ this generation is 49% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.94119267e+08 8.69910200e+07 6.76583546e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.06307737e+08 8.74751908e+07 7.15719826e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.02793285e+08 3.08865419e+08 5.14930098e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.08851776e+08 2.69696285e+08 1.17660114e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.48254281e+08 1.26512596e+08 6.87425714e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.24603571e+08 2.66320426e+08 1.36749665e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.63008879e+08 2.84506365e+08 1.22096067e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.72418428e+07 1.92821677e+08 4.57108102e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.30472622e+08 2.50704133e+08 1.40439834e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.96459413e+08 2.24560314e+08 1.48301755e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.65803182e+08 2.08987130e+08 8.53772370e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.83511204e+08 2.86492733e+08 7.22217772e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.46216073e+08 1.31604381e+08 1.46659821e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.06380012e+08 1.28494322e+08 1.28786410e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.64756438e+08 8.79367563e+07 8.34106009e-03]
+... choosing a new random point
+ this generation is 53% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.05437477e+08 2.22602481e+08 1.14048920e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.25902859e+08 1.40156880e+08 8.41541869e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.80607866e+08 1.96091481e+08 1.12638012e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.82741667e+08 1.13036883e+08 1.04412310e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.09277648e+08 1.35255208e+08 1.12609152e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.74380101e+08 2.44176769e+08 1.32607029e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.46121133e+08 2.96961443e+08 8.13059412e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.05240235e+07 1.76426920e+08 1.29541713e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.41069555e+08 1.57069488e+08 1.05123981e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.93825203e+08 2.80414734e+08 4.01508039e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.14393403e+08 1.53225836e+08 4.12262154e-03]
+... choosing a new random point
+ this generation is 54% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.72448182e+08 1.16705489e+08 6.76133840e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.21358197e+08 2.41441492e+08 1.41198340e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.81429005e+08 7.79162609e+07 5.49045770e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.38472687e+08 7.38646788e+07 1.08313134e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.82809234e+08 2.34826808e+08 6.52806877e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.00993408e+08 9.89734829e+07 7.28399979e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.47716019e+08 2.31730611e+08 7.69016718e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.79339689e+07 1.50469168e+08 6.48811365e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.21173732e+07 1.88757936e+08 1.41409615e-02]
+... choosing a new random point
+ this generation is 55% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.25165872e+08 1.28428245e+08 6.49175732e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.00922969e+08 3.10551275e+08 1.20120983e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.58132239e+08 3.02207074e+08 7.57742862e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.25143746e+08 2.46008623e+08 1.08585904e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.01349691e+08 1.12215467e+08 5.47986598e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.70488316e+08 7.85281930e+07 8.60250239e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.01903921e+08 3.11045373e+08 1.09502729e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.56189044e+08 1.97558782e+08 7.49947140e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.31452766e+08 2.11454958e+08 1.23722706e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.10496103e+08 7.75072367e+07 9.16786193e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.51453562e+08 7.12792949e+07 1.32661413e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.54539166e+08 9.29716629e+07 4.91494885e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.44172276e+08 7.80533068e+07 7.45555821e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.60722165e+08 2.20622287e+08 4.71230721e-03]
+... choosing a new random point
+ this generation is 56% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.55302610e+08 8.78577044e+07 6.18389904e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.04886759e+08 2.34029707e+08 1.48940896e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.77104857e+08 2.36503384e+08 9.65732140e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.44799407e+08 9.94027949e+07 8.25048091e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.82364480e+08 2.28168506e+08 1.02712505e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.42611221e+08 2.73984914e+08 1.35797552e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.15044600e+08 2.44454286e+08 4.79931409e-03]
+... choosing a new random point
+ this generation is 57% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.97309663e+07 2.58097136e+08 7.81223600e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.86430792e+08 2.26080447e+08 1.35537166e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.25833433e+08 1.44360993e+08 1.27291651e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.16523415e+08 2.28472754e+08 8.10007735e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.49565928e+07 1.94031036e+08 1.37257674e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.67244996e+08 1.65620989e+08 1.25000305e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.34100288e+08 1.27623846e+08 1.31513683e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.32368041e+08 1.03099650e+08 1.05404921e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.26642947e+07 2.09473602e+08 7.93536376e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.35318096e+08 2.66798308e+08 1.46668654e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.02042492e+08 1.87015551e+08 1.47124235e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.10027138e+08 1.98458593e+08 5.56856972e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.47709511e+08 2.37606694e+08 1.03999159e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.67161926e+07 3.10730740e+08 1.19457239e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.28783583e+08 9.46854863e+07 6.09301067e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.56347858e+08 9.55831723e+07 1.34016362e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.65599804e+08 2.28937712e+08 8.65729487e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.23566928e+08 9.77435196e+07 1.23533407e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.71478880e+08 1.44157156e+08 7.34122409e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.40063215e+08 2.75852555e+08 1.20398169e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.36460848e+08 1.29993571e+08 9.93935091e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.70985299e+08 1.24358614e+08 1.40482356e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.1555192e+08 1.4625143e+08 1.0531585e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.03047851e+08 1.23670198e+08 7.04816089e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.19466588e+08 9.65465083e+07 5.19838323e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.50009304e+08 1.08725536e+08 9.44440337e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.40487888e+08 2.50054772e+08 1.22455135e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.59469426e+07 2.69355128e+08 1.49058578e-02]
+... choosing a new random point
+ this generation is 62% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.60668055e+08 1.16368424e+08 1.25552720e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.49915569e+07 2.73731747e+08 1.43577726e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.42714969e+07 2.19117962e+08 1.09169055e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.42495498e+07 2.25911529e+08 1.26919821e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.12914848e+08 1.15548646e+08 1.33750165e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.99417346e+08 1.07691191e+08 9.07838247e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.87802780e+08 2.83070235e+08 8.23586303e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.15121700e+08 1.26608786e+08 8.87851445e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.69267132e+08 1.74958344e+08 1.14614393e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.25048508e+07 1.01456492e+08 6.02234764e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.42092192e+08 7.38999631e+07 1.49895969e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.57817078e+08 2.37998849e+08 1.13133887e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.82504795e+08 1.11959788e+08 8.99648414e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.51170538e+08 3.12476153e+08 1.09913357e-02]
+... choosing a new random point
+ this generation is 67% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.00639790e+08 1.22839355e+08 6.05119048e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.54089917e+08 1.93383250e+08 5.51925419e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.56870665e+08 2.46046260e+08 1.30028508e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.54113324e+08 2.09268382e+08 1.14023434e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.26320232e+08 2.17152344e+08 8.18884437e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.11702753e+08 2.19754387e+08 7.78300237e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.66475516e+07 1.83390047e+08 8.78200790e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.06540263e+08 1.67818366e+08 4.71587271e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.04103512e+08 2.98988494e+08 8.46336445e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.69399391e+08 1.81683340e+08 9.04875715e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.75771751e+08 8.88013611e+07 5.26755606e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.52022452e+08 2.99600227e+08 4.42908913e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.07722223e+08 2.85345745e+08 4.82190733e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.42103176e+08 2.87214579e+08 6.97186406e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.07853923e+08 2.14513130e+08 9.38093568e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.27273927e+08 2.79884555e+08 1.12497266e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.22101685e+08 7.67878090e+07 5.21644914e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.87552045e+08 1.68215738e+08 1.26422814e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.13586291e+08 1.36710530e+08 1.36055164e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.39706342e+07 2.63198749e+08 1.30359419e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.19678633e+08 2.02146864e+08 6.89395599e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.20621741e+07 1.04117204e+08 1.45115175e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.13227049e+08 9.65262658e+07 5.99718439e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.54705278e+08 1.40254096e+08 1.24736891e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.19386403e+08 2.16779156e+08 5.32401230e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.38182049e+08 1.92764418e+08 4.59648285e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.18873878e+08 2.57322773e+08 7.28576921e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.42267261e+07 1.85250801e+08 6.06246369e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.60290750e+08 1.97342211e+08 7.27299155e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.47772731e+08 1.16077080e+08 9.35693174e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.16735026e+08 1.66608417e+08 1.13015189e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.10513773e+08 2.01870262e+08 6.10005781e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.61858898e+08 1.07813053e+08 5.19184781e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.92243095e+08 2.56392357e+08 5.72113385e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.50622708e+08 2.44437863e+08 1.05953262e-02]
+... choosing a new random point
+ this generation is 81% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.20968312e+08 2.44651107e+08 8.08303735e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.92622964e+07 1.67972803e+08 8.14148705e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.14218048e+08 1.26809338e+08 1.31055617e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.40039342e+08 9.72475095e+07 9.97470838e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.57603404e+08 9.45081515e+07 1.30935284e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.84590255e+08 7.28885023e+07 1.14215377e-02]
+... choosing a new random point
+ this generation is 84% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.81899185e+08 8.70887831e+07 1.47866759e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.73448955e+08 1.84006023e+08 1.13433878e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.47803778e+08 7.21943126e+07 1.25184675e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.80721349e+07 2.44890159e+08 1.36821729e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.52024590e+08 2.06351970e+08 1.26035126e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.83839514e+08 2.23403328e+08 1.49524069e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.37720620e+08 1.24440415e+08 1.43624574e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.50457279e+08 2.41328818e+08 6.96155066e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.03104229e+08 2.11148052e+08 1.20506676e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.90420768e+08 2.09198611e+08 1.35848137e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.18224963e+07 3.08686965e+08 1.49561639e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.10232488e+08 1.21785058e+08 1.10080235e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.12432617e+08 2.05956932e+08 1.05472482e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.84511461e+08 1.69413878e+08 1.22218863e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.86755228e+08 2.96711361e+08 1.13945141e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.84794921e+08 2.67614223e+08 1.37683158e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.58529352e+07 2.60982655e+08 4.39448825e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.32037857e+08 1.18493047e+08 1.41240390e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.83393212e+07 8.23909568e+07 1.20556559e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.39059076e+08 1.90770392e+08 7.97688343e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.36468473e+08 1.50791955e+08 1.03122543e-02]
+... choosing a new random point
+ this generation is 86% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.03553527e+08 7.55460220e+07 8.71167418e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.81058230e+08 2.05943263e+08 1.34849294e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.19199538e+08 1.25102702e+08 1.05010458e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.46471991e+08 2.43151275e+08 1.14092946e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.97171551e+08 2.44085402e+08 1.30651014e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.74187788e+08 2.08162566e+08 8.50707210e-03]
+... choosing a new random point
+ this generation is 89% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.09251740e+08 3.16008531e+08 1.13102315e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.51535666e+08 9.68773094e+07 6.53818662e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.75545117e+08 3.15523287e+08 5.32119247e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.86394010e+08 2.74341762e+08 1.16706432e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.09642292e+08 2.11313246e+08 7.07510394e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.03673738e+08 3.17188073e+08 1.43808812e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.66229097e+08 1.91580515e+08 5.23781953e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.12125402e+08 1.33692869e+08 5.87981735e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.41765006e+07 9.72933612e+07 1.47961724e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.61339294e+08 1.97502414e+08 1.20518239e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.59765838e+08 1.64633524e+08 7.62526241e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.41465622e+08 1.28450413e+08 1.00094950e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.66407087e+08 3.09177384e+08 9.27971709e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.91978520e+07 1.23623078e+08 1.10753893e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.95028221e+08 1.46369576e+08 9.69705381e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.60274363e+08 3.13210371e+08 6.11475722e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.58428809e+08 2.93316998e+08 7.01351270e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.22734825e+08 1.96645891e+08 1.27947837e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.19456157e+08 2.95277610e+08 8.51720304e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.47188212e+08 2.30765960e+08 1.42559166e-02]
+... choosing a new random point
+ this generation is 90% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.65091944e+07 9.93159981e+07 8.54805932e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.37809634e+08 2.79959441e+08 1.41362022e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.65957745e+08 7.35410314e+07 9.17973045e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.79442491e+08 1.33099019e+08 1.41506828e-02]
+... choosing a new random point
+ this generation is 92% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.67515534e+08 2.43873509e+08 7.08428017e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.82676581e+07 2.69462224e+08 7.42803336e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.09182172e+08 1.18830181e+08 4.91513098e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.32578168e+08 2.67252295e+08 8.89061487e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.48570718e+08 7.69927691e+07 7.83373951e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.02147722e+08 2.44685359e+08 5.60104322e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.63739858e+08 1.34822235e+08 1.41510551e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.11753713e+08 2.68940384e+08 9.88056397e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.81033212e+08 1.67137793e+08 8.53734277e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.42104686e+08 2.30113707e+08 6.70931903e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.89612156e+08 3.17889938e+08 1.48352886e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.25168913e+08 1.41779707e+08 5.55769725e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.91818453e+08 2.33915134e+08 7.52175436e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.99402251e+08 7.79719694e+07 8.09944443e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.53454120e+07 2.87663005e+08 9.92011755e-03]
+... choosing a new random point
+ this generation is 97% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.57832217e+08 1.55675907e+08 7.17237146e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.79964236e+08 8.66486678e+07 1.26798820e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.19339658e+08 1.90299275e+08 8.51270015e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.57620552e+08 3.18150774e+08 1.08314938e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.09325713e+08 2.70862776e+08 5.13768872e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.12112742e+08 1.74455401e+08 8.86514908e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.10989842e+08 3.01768794e+08 7.08616070e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.89921543e+08 1.38404452e+08 6.40260759e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.45055689e+08 1.16459200e+08 1.00876490e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.03674402e+08 2.41398525e+08 1.07046663e-02]
+... choosing a new random point
+simulation failed with params...
+[2.90267361e+08 2.59551731e+08 7.12785575e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.56804061e+08 2.42471542e+08 5.92077047e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.39354081e+08 2.00456059e+08 1.22188522e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.75403684e+08 3.07257425e+08 1.18719752e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.53680069e+08 1.39678357e+08 5.24872554e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.16171078e+08 1.74429859e+08 6.88771450e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.08327030e+08 1.61879681e+08 9.30859897e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.94359811e+08 1.80965449e+08 1.28047674e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.48091192e+08 1.69410155e+08 1.15942523e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.21295313e+08 8.65928467e+07 1.48621451e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.00640991e+08 1.80911689e+08 5.82996828e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.61135336e+08 1.76295278e+08 1.05690597e-02]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.19313274e+08 2.56852769e+08 1.40521416e-02]
+... choosing a new random point
+Cost of first 10 of population : [4.74488658 4.78063494 4.85839588 4.94340465 5.28497743 5.73920104
+ 5.89653421 6.59571562 6.68655774 6.71623639]
+worst survivor params normed : [0.11993406 0.73794253 0.08878643]
+best params normed : [0.87212199 0.11985392 0.06513621]
+generation num: 2
+ this generation is 1% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.35943063e+08 2.08096345e+08 4.46902757e-03]
+... choosing a new random point
+ this generation is 2% done
+ this generation is 3% done
+ this generation is 4% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.18955929e+08 1.93163672e+08 4.98674495e-03]
+... choosing a new random point
+ this generation is 5% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.88445302e+08 1.60708020e+08 4.78337362e-03]
+... choosing a new random point
+ this generation is 6% done
+ this generation is 8% done
+ this generation is 9% done
+ this generation is 10% done
+ this generation is 11% done
+ this generation is 12% done
+ this generation is 13% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.36944890e+08 1.41723240e+08 4.87282049e-03]
+... choosing a new random point
+ this generation is 14% done
+ this generation is 15% done
+ this generation is 16% done
+ this generation is 17% done
+ this generation is 18% done
+ this generation is 19% done
+ this generation is 20% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.50965423e+08 2.68089126e+08 4.10317345e-03]
+... choosing a new random point
+ this generation is 22% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.08160489e+08 3.20000000e+08 3.99957184e-03]
+... choosing a new random point
+ this generation is 23% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.69161275e+08 1.67959825e+08 5.65185536e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.03185565e+08 3.20000000e+08 4.34191302e-03]
+... choosing a new random point
+ this generation is 24% done
+ this generation is 25% done
+ this generation is 26% done
+ this generation is 27% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.17327685e+08 1.45840782e+08 4.78676393e-03]
+... choosing a new random point
+ this generation is 28% done
+ this generation is 29% done
+ this generation is 30% done
+ this generation is 31% done
+ this generation is 32% done
+ this generation is 33% done
+ this generation is 34% done
+ this generation is 35% done
+ this generation is 37% done
+ this generation is 38% done
+ this generation is 39% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[8.38479618e+07 3.20000000e+08 4.30906504e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.43131978e+08 2.00794361e+08 5.10853126e-03]
+... choosing a new random point
+ this generation is 40% done
+ this generation is 41% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.46020019e+08 3.19892776e+08 4.05346998e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.44710223e+08 2.78046393e+08 4.18860956e-03]
+... choosing a new random point
+ this generation is 42% done
+ this generation is 43% done
+ this generation is 44% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.16394025e+08 2.48748095e+08 3.95730233e-03]
+... choosing a new random point
+ this generation is 45% done
+ this generation is 46% done
+ this generation is 47% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.15691441e+08 2.57224658e+08 4.48572062e-03]
+... choosing a new random point
+ this generation is 48% done
+ this generation is 49% done
+ this generation is 51% done
+ this generation is 52% done
+ this generation is 53% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.95965739e+08 2.21612052e+08 5.98824671e-03]
+... choosing a new random point
+ this generation is 54% done
+ this generation is 55% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.61058568e+08 1.95313434e+08 5.98350104e-03]
+... choosing a new random point
+ this generation is 56% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.14330925e+08 1.99126760e+08 4.98322222e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.66141953e+08 2.59874117e+08 5.60578998e-03]
+... choosing a new random point
+ this generation is 57% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.81623856e+08 2.27352863e+08 4.83718256e-03]
+... choosing a new random point
+ this generation is 58% done
+ this generation is 59% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.07602884e+08 2.24789141e+08 7.05162793e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.14147146e+08 1.84419359e+08 4.58998294e-03]
+... choosing a new random point
+ this generation is 60% done
+ this generation is 61% done
+ this generation is 62% done
+ this generation is 63% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.32342495e+08 1.90196263e+08 4.73205217e-03]
+... choosing a new random point
+ this generation is 65% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.18289886e+08 2.01588591e+08 4.42412772e-03]
+... choosing a new random point
+ this generation is 66% done
+ this generation is 67% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.24217576e+08 2.20091932e+08 4.93215529e-03]
+... choosing a new random point
+ this generation is 68% done
+ this generation is 69% done
+ this generation is 70% done
+ this generation is 71% done
+ this generation is 72% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.13743924e+08 1.87722019e+08 5.46378076e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.06585889e+08 1.93457498e+08 8.01649875e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.67354818e+08 2.37838625e+08 4.66852667e-03]
+... choosing a new random point
+ this generation is 73% done
+ this generation is 74% done
+ this generation is 75% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.10392828e+08 1.20003479e+08 5.09169316e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.20192420e+08 1.39803789e+08 4.86132312e-03]
+... choosing a new random point
+ this generation is 76% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.04822241e+08 1.17595181e+08 5.24822452e-03]
+... choosing a new random point
+ this generation is 77% done
+ this generation is 78% done
+ this generation is 80% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.32187592e+08 2.34523272e+08 4.97520307e-03]
+... choosing a new random point
+ this generation is 81% done
+ this generation is 82% done
+ this generation is 83% done
+ this generation is 84% done
+ this generation is 85% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.26575044e+08 1.19797829e+08 5.09126171e-03]
+... choosing a new random point
+ this generation is 86% done
+ this generation is 87% done
+ this generation is 88% done
+ this generation is 89% done
+ this generation is 90% done
+ this generation is 91% done
+ this generation is 92% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.31376185e+08 2.33524098e+08 5.50834456e-03]
+... choosing a new random point
+ this generation is 94% done
+ this generation is 95% done
+ this generation is 96% done
+ this generation is 97% done
+ this generation is 98% done
+ this generation is 99% done
+ this generation is 100% done
+Cost of first 10 of population : [4.50161157 4.51024404 4.54288534 4.54914321 4.56820338 4.60992263
+ 4.64211294 4.65383965 4.74488658 4.75023939]
+worst survivor params normed : [0.18409927 0.36495686 0.10809637]
+best params normed : [0.18727557 0.26314631 0.10006275]
+generation num: 3
+ this generation is 1% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.32946452e+07 2.06682692e+08 7.02199403e-03]
+... choosing a new random point
+ this generation is 2% done
+ this generation is 3% done
+ this generation is 4% done
+ this generation is 5% done
+ this generation is 6% done
+ this generation is 8% done
+ this generation is 9% done
+ this generation is 10% done
+ this generation is 11% done
+ this generation is 12% done
+ this generation is 13% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.28454343e+08 2.57249810e+08 4.96241199e-03]
+... choosing a new random point
+ this generation is 14% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.08222057e+08 2.31067642e+08 5.99932391e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.93509437e+08 2.16663686e+08 4.24595987e-03]
+... choosing a new random point
+ this generation is 15% done
+ this generation is 16% done
+ this generation is 17% done
+ this generation is 18% done
+ this generation is 19% done
+ this generation is 20% done
+ this generation is 22% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.10792820e+08 2.85823444e+08 4.40857663e-03]
+... choosing a new random point
+ this generation is 23% done
+ this generation is 24% done
+ this generation is 25% done
+ this generation is 26% done
+ this generation is 27% done
+ this generation is 28% done
+ this generation is 29% done
+ this generation is 30% done
+ this generation is 31% done
+ this generation is 32% done
+ this generation is 33% done
+ this generation is 34% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.31728750e+08 1.97921302e+08 4.52462702e-03]
+... choosing a new random point
+ this generation is 35% done
+ this generation is 37% done
+ this generation is 38% done
+ this generation is 39% done
+ this generation is 40% done
+ this generation is 41% done
+ this generation is 42% done
+ this generation is 43% done
+ this generation is 44% done
+ this generation is 45% done
+ this generation is 46% done
+ this generation is 47% done
+ this generation is 48% done
+ this generation is 49% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.91714707e+08 1.49917850e+08 4.56357553e-03]
+... choosing a new random point
+ this generation is 51% done
+ this generation is 52% done
+ this generation is 53% done
+ this generation is 54% done
+ this generation is 55% done
+ this generation is 56% done
+ this generation is 57% done
+ this generation is 58% done
+ this generation is 59% done
+ this generation is 60% done
+ this generation is 61% done
+ this generation is 62% done
+ this generation is 63% done
+ this generation is 65% done
+ this generation is 66% done
+ this generation is 67% done
+ this generation is 68% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.28739406e+08 3.04119567e+08 5.79059202e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.51892766e+08 3.20000000e+08 5.67874225e-03]
+... choosing a new random point
+ this generation is 69% done
+ this generation is 70% done
+ this generation is 71% done
+ this generation is 72% done
+ this generation is 73% done
+ this generation is 74% done
+ this generation is 75% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.38444527e+08 3.03877048e+08 4.88077845e-03]
+... choosing a new random point
+ this generation is 76% done
+ this generation is 77% done
+ this generation is 78% done
+ this generation is 80% done
+ this generation is 81% done
+ this generation is 82% done
+ this generation is 83% done
+ this generation is 84% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.37967529e+08 1.88459193e+08 5.08322838e-03]
+... choosing a new random point
+ this generation is 85% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.56852592e+08 8.10596533e+07 4.84578278e-03]
+... choosing a new random point
+ this generation is 86% done
+ this generation is 87% done
+ this generation is 88% done
+ this generation is 89% done
+ this generation is 90% done
+ this generation is 91% done
+ this generation is 92% done
+ this generation is 94% done
+ this generation is 95% done
+ this generation is 96% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.49831503e+08 1.59198503e+08 4.68220153e-03]
+... choosing a new random point
+ this generation is 97% done
+ this generation is 98% done
+ this generation is 99% done
+ this generation is 100% done
+Cost of first 10 of population : [4.29179961 4.38960644 4.39208218 4.394656   4.44219001 4.45766231
+ 4.47596189 4.49151481 4.49251506 4.49505741]
+worst survivor params normed : [0.22208107 0.30902864 0.09566561]
+best params normed : [0.17409111 0.25673485 0.09409889]
+generation num: 4
+ this generation is 1% done
+ this generation is 2% done
+ this generation is 3% done
+ this generation is 4% done
+ this generation is 5% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.26346278e+08 1.29742702e+08 4.90117212e-03]
+... choosing a new random point
+ this generation is 6% done
+ this generation is 8% done
+ this generation is 9% done
+ this generation is 10% done
+ this generation is 11% done
+ this generation is 12% done
+ this generation is 13% done
+ this generation is 14% done
+ this generation is 15% done
+ this generation is 16% done
+ this generation is 17% done
+ this generation is 18% done
+ this generation is 19% done
+ this generation is 20% done
+ this generation is 22% done
+ this generation is 23% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.20000000e+08 1.42179478e+08 4.17974138e-03]
+... choosing a new random point
+ this generation is 24% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.08066002e+08 1.52506521e+08 4.35832670e-03]
+... choosing a new random point
+ this generation is 25% done
+ this generation is 26% done
+ this generation is 27% done
+ this generation is 28% done
+ this generation is 29% done
+ this generation is 30% done
+ this generation is 31% done
+ this generation is 32% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.17275844e+08 1.24760073e+08 4.11145170e-03]
+... choosing a new random point
+ this generation is 34% done
+ this generation is 35% done
+ this generation is 37% done
+ this generation is 38% done
+ this generation is 39% done
+ this generation is 40% done
+ this generation is 41% done
+ this generation is 42% done
+ this generation is 43% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.76675005e+08 2.44447767e+08 4.34952098e-03]
+... choosing a new random point
+ this generation is 44% done
+ this generation is 45% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.25317015e+08 1.59953544e+08 5.65070381e-03]
+... choosing a new random point
+ this generation is 47% done
+ this generation is 48% done
+ this generation is 49% done
+ this generation is 51% done
+ this generation is 52% done
+ this generation is 53% done
+ this generation is 54% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.62232719e+08 1.49006822e+08 5.30607164e-03]
+... choosing a new random point
+ this generation is 55% done
+ this generation is 56% done
+ this generation is 57% done
+ this generation is 58% done
+ this generation is 59% done
+ this generation is 60% done
+ this generation is 61% done
+ this generation is 62% done
+ this generation is 63% done
+ this generation is 65% done
+ this generation is 66% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.79526550e+08 1.98576618e+08 5.52848358e-03]
+... choosing a new random point
+ this generation is 67% done
+ this generation is 68% done
+ this generation is 69% done
+ this generation is 70% done
+ this generation is 71% done
+ this generation is 72% done
+ this generation is 73% done
+ this generation is 74% done
+ this generation is 75% done
+ this generation is 76% done
+ this generation is 77% done
+ this generation is 78% done
+ this generation is 80% done
+ this generation is 81% done
+ this generation is 82% done
+ this generation is 83% done
+ this generation is 84% done
+ this generation is 85% done
+ this generation is 86% done
+ this generation is 87% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.86972280e+08 1.33231427e+08 4.53210046e-03]
+... choosing a new random point
+ this generation is 88% done
+ this generation is 89% done
+ this generation is 90% done
+ this generation is 91% done
+ this generation is 92% done
+ this generation is 94% done
+ this generation is 95% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.20000000e+08 1.15354417e+08 4.95815344e-03]
+... choosing a new random point
+ this generation is 96% done
+ this generation is 97% done
+ this generation is 98% done
+ this generation is 99% done
+ this generation is 100% done
+Cost of first 10 of population : [4.23028267 4.24708075 4.25472088 4.26699333 4.26779047 4.29179961
+ 4.29554476 4.33501978 4.34020004 4.3583822 ]
+worst survivor params normed : [0.12376384 0.27013127 0.1221417 ]
+best params normed : [0.24709471 0.24485941 0.09388263]
+generation num: 5
+ this generation is 1% done
+ this generation is 2% done
+ this generation is 3% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.41634683e+08 1.46461457e+08 5.16148720e-03]
+... choosing a new random point
+ this generation is 4% done
+ this generation is 5% done
+ this generation is 6% done
+ this generation is 8% done
+ this generation is 9% done
+ this generation is 10% done
+ this generation is 11% done
+ this generation is 12% done
+ this generation is 13% done
+ this generation is 14% done
+ this generation is 15% done
+ this generation is 16% done
+ this generation is 17% done
+ this generation is 18% done
+ this generation is 19% done
+ this generation is 20% done
+ this generation is 22% done
+ this generation is 23% done
+ this generation is 24% done
+ this generation is 25% done
+ this generation is 26% done
+ this generation is 27% done
+ this generation is 28% done
+ this generation is 29% done
+ this generation is 30% done
+ this generation is 31% done
+ this generation is 32% done
+ this generation is 33% done
+ this generation is 34% done
+ this generation is 35% done
+ this generation is 37% done
+ this generation is 38% done
+ this generation is 39% done
+ this generation is 40% done
+ this generation is 41% done
+ this generation is 42% done
+ this generation is 43% done
+ this generation is 44% done
+ this generation is 45% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.12151687e+08 1.12349927e+08 4.98734775e-03]
+... choosing a new random point
+ this generation is 46% done
+ this generation is 47% done
+ this generation is 48% done
+ this generation is 49% done
+ this generation is 51% done
+ this generation is 52% done
+ this generation is 53% done
+ this generation is 54% done
+ this generation is 55% done
+ this generation is 56% done
+ this generation is 57% done
+ this generation is 58% done
+ this generation is 59% done
+ this generation is 60% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.18605165e+08 1.48741453e+08 4.93186393e-03]
+... choosing a new random point
+ this generation is 61% done
+ this generation is 62% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.01289166e+08 1.70962884e+08 4.36749045e-03]
+... choosing a new random point
+ this generation is 63% done
+ this generation is 65% done
+ this generation is 66% done
+ this generation is 67% done
+ this generation is 68% done
+ this generation is 69% done
+ this generation is 70% done
+ this generation is 71% done
+ this generation is 72% done
+ this generation is 73% done
+ this generation is 74% done
+ this generation is 75% done
+ this generation is 76% done
+ this generation is 77% done
+ this generation is 78% done
+ this generation is 80% done
+ this generation is 81% done
+ this generation is 82% done
+ this generation is 83% done
+ this generation is 84% done
+ this generation is 85% done
+ this generation is 86% done
+ this generation is 87% done
+ this generation is 88% done
+ this generation is 89% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.15795677e+07 1.75736813e+08 5.14824073e-03]
+... choosing a new random point
+ this generation is 90% done
+ this generation is 91% done
+ this generation is 92% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[3.17201640e+08 1.21719218e+08 4.16658865e-03]
+... choosing a new random point
+ this generation is 94% done
+ this generation is 95% done
+ this generation is 96% done
+ this generation is 97% done
+ this generation is 98% done
+ this generation is 99% done
+ this generation is 100% done
+Cost of first 10 of population : [4.18258106 4.23028267 4.24107545 4.24708075 4.24783863 4.25472088
+ 4.26699333 4.26779047 4.27095028 4.27300189]
+worst survivor params normed : [0.41270338 0.26940177 0.09458418]
+best params normed : [0.03432918 0.24034163 0.09405095]
+generation num: 6
+ this generation is 1% done
+ this generation is 2% done
+ this generation is 3% done
+ this generation is 4% done
+ this generation is 5% done
+ this generation is 6% done
+ this generation is 8% done
+ this generation is 9% done
+ this generation is 10% done
+ this generation is 11% done
+ this generation is 12% done
+ this generation is 13% done
+ this generation is 14% done
+ this generation is 15% done
+ this generation is 16% done
+ this generation is 17% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.77298451e+08 9.95010804e+07 4.86086362e-03]
+... choosing a new random point
+ this generation is 18% done
+ this generation is 19% done
+ this generation is 20% done
+ this generation is 22% done
+ this generation is 23% done
+ this generation is 24% done
+ this generation is 25% done
+ this generation is 26% done
+ this generation is 27% done
+ this generation is 28% done
+ this generation is 29% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[9.65610177e+07 1.19215622e+08 7.15114874e-03]
+... choosing a new random point
+ this generation is 30% done
+ this generation is 31% done
+ this generation is 32% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.47428990e+08 1.65941519e+08 4.83686817e-03]
+... choosing a new random point
+ this generation is 33% done
+ this generation is 34% done
+ this generation is 35% done
+ this generation is 37% done
+ this generation is 38% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[2.67874262e+08 1.23781537e+08 4.49903496e-03]
+... choosing a new random point
+ this generation is 40% done
+ this generation is 41% done
+ this generation is 42% done
+ this generation is 43% done
+ this generation is 44% done
+ this generation is 45% done
+ this generation is 46% done
+ this generation is 47% done
+ this generation is 48% done
+ this generation is 49% done
+ this generation is 51% done
+ this generation is 52% done
+ this generation is 53% done
+ this generation is 54% done
+ this generation is 55% done
+ this generation is 56% done
+ this generation is 57% done
+ this generation is 58% done
+ this generation is 59% done
+ this generation is 60% done
+ this generation is 61% done
+ this generation is 62% done
+ this generation is 63% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.30915426e+08 1.20843136e+08 5.03915486e-03]
+... choosing a new random point
+ this generation is 65% done
+ this generation is 66% done
+ this generation is 67% done
+ this generation is 68% done
+ this generation is 69% done
+ this generation is 70% done
+ this generation is 71% done
+ this generation is 72% done
+ this generation is 73% done
+ this generation is 74% done
+ this generation is 75% done
+ this generation is 76% done
+ this generation is 77% done
+ this generation is 78% done
+ this generation is 80% done
+ this generation is 81% done
+ this generation is 82% done
+ this generation is 83% done
+ this generation is 84% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.48472607e+08 1.56950089e+08 4.50694972e-03]
+... choosing a new random point
+ this generation is 85% done
+ this generation is 86% done
+ this generation is 87% done
+ this generation is 88% done
+ this generation is 89% done
+ this generation is 90% done
+ this generation is 91% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.24897789e+08 1.57733754e+08 4.66832199e-03]
+... choosing a new random point
+ this generation is 92% done
+ this generation is 94% done
+ this generation is 95% done
+ this generation is 96% done
+ this generation is 97% done
+ this generation is 98% done
+ this generation is 99% done
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[7.51968966e+07 1.77175664e+08 4.95975232e-03]
+... choosing a new random point
+Failed to converge
+restarting simulation object
+simulation failed with params...
+[1.35814913e+08 1.92601570e+08 4.49061700e-03]
+... choosing a new random point
+Cost of first 10 of population : [4.18258106 4.18403975 4.21182839 4.21613105 4.23028267 4.24107545
+ 4.24159394 4.24242571 4.24708075 4.24783863]
+worst survivor params normed : [0.26017907 0.26435508 0.0826251 ]
+best params normed : [0.03432918 0.24034163 0.09405095]
+
+genetic_algorithm is complete
+init params     : [[317440000.0], [10664000.0], [0.0015]]
+best fit params : [7.95479654e+07 1.30845066e+08 1.54665660e-03]
+best cost       : 4.182581062516981
+param id complete

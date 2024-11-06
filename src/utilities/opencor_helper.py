@@ -61,7 +61,7 @@ class SimulationHelper():
             print("Failed to converge")
             print('restarting simulation object')
             self.simulation.reset()
-            self.simulation.release_all_values()
+            #self.simulation.release_all_values() # fix for recent opencor release. commented out because causes error 11/4/24 MG
             self.simulation.clear_results()
             return False
 
@@ -71,7 +71,7 @@ class SimulationHelper():
         # mem = self.process_memory()
         # print(f'memory_pre_clear={mem}')
         self.simulation.reset(True)
-        self.simulation.release_all_values()
+        #self.simulation.release_all_values() # fix for recent opencor release. commented out because causes error 11/4/24 MG
         self.simulation.clear_results()
         # mem = self.process_memory()
         # print(f'memory_post_clear={mem}')

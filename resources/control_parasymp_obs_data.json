@@ -31,7 +31,7 @@
     "value": 7.2e-5,
     "std": 7.2e-6
   },
-  { "variable": "heart/q_LV",
+  { "variable": "heart/q_lv",
     "data_type": "constant",
     "unit": "m3",
     "weight": 1.0,
