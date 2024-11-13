@@ -1113,7 +1113,7 @@
         <!-- volume fractions-->
         <variable initial_value="0.21" name="F_O2_D" public_interface="out" units="dimensionless"/>
         <variable initial_value="0.000421" name="F_CO2_D" public_interface="out" units="dimensionless"/>
-        <variable initial_value="0.21" name="F_O2_A" public_interface="out" units="dimensionless"/>
+        <variable initial_value="0.21" name="F_O2_A" public_interface="in" units="dimensionless"/>
         <variable initial_value="0.000421" name="F_CO2_A" public_interface="out" units="dimensionless"/>
         <!-- partial pressures, outputs to the pulmonary gas exchange model-->
         <variable name="P_O2_A" public_interface="out" units="J_per_m3"/>

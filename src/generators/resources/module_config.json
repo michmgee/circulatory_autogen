@@ -1,4 +1,131 @@
-[
+[     
+  {
+    "vessel_type":"step_cardiopulm_receptor",
+    "BC_type":"nn",
+    "module_format":"cellml",
+    "module_file":"debug_modules.cellml",
+    "module_type":"step_cardiopulm_receptor",
+    "exit_ports":
+    [
+      {
+        "port_type":"pressure_port",
+        "variables":["u_out"]
+      }
+    ],
+    "variables_and_units":
+    [
+      ["u_out", "J_per_m3", "access", "variable"]
+    ]
+  },    
+  {
+    "vessel_type":"step_gas_transport",
+    "BC_type":"nn",
+    "module_format":"cellml",
+    "module_file":"debug_modules.cellml",
+    "module_type":"step_gas_transport",
+    "exit_ports":
+    [
+      {
+        "port_type":"flow_port",
+        "variables":["v"]
+      }
+    ],
+    "variables_and_units":
+    [
+      ["v", "m3_per_s", "access", "variable"]
+    ]
+  },
+  {
+    "vessel_type":"step_pulmonary_GE",
+    "BC_type":"nn",
+    "module_format":"cellml",
+    "module_file":"debug_modules.cellml",
+    "module_type":"step_pulmonary_GE",
+    "exit_ports":
+    [
+      {
+        "port_type":"flow_port",
+        "variables":["v"]
+      }
+    ],
+    "variables_and_units":
+    [
+      ["v", "m3_per_s", "access", "variable"]
+    ]
+  },
+  {
+    "vessel_type":"step_baro",
+    "BC_type":"nn",
+    "module_format":"cellml",
+    "module_file":"debug_modules.cellml",
+    "module_type":"step_baro",
+    "exit_ports":
+    [
+      {
+        "port_type":"pressure_and_deriv_port",
+        "variables":["P_sys", "dP_sys_dt"]
+      }
+    ],
+    "variables_and_units":
+    [
+      ["P_sys", "J_per_m3", "access", "variable"],
+      ["t_start", "second", "access", "constant"],
+      ["u_min", "J_per_m3", "access", "constant"],
+      ["u_max", "J_per_m3", "access", "constant"],
+      ["dP_sys_dt", "J_per_m3s", "access", "variable"],
+      ["dP_sys_dt_min", "J_per_m3s", "access", "constant"],
+      ["dP_sys_dt_max", "J_per_m3s", "access", "constant"]
+    ]
+  },
+  {
+    "vessel_type":"step_vp",
+    "BC_type":"nn",
+    "module_format":"cellml",
+    "module_file":"debug_modules.cellml",
+    "module_type":"step_vp",
+    "exit_ports":
+    [
+      {
+        "port_type":"pressure_port",
+        "variables":["u_out"]
+      }
+    ],
+    "variables_and_units":
+    [
+      ["u_out", "J_per_m3", "access", "variable"],
+      ["t_start", "second", "access", "constant"],
+      ["u_min", "J_per_m3", "access", "variable"],
+      ["u_max", "J_per_m3", "access", "variable"]
+    ]
+  },
+  {
+    "vessel_type":"step_tissue_GE",
+    "BC_type":"nn",
+    "module_format":"cellml",
+    "module_file":"debug_modules.cellml",
+    "module_type":"step_tissue_GE",
+    "exit_ports":
+    [
+      {
+        "port_type":"gas_port",
+        "variables":["C_CO2_p","C_O2_p"]
+      },
+      {
+        "port_type":"O2_port",
+        "variables":["C_O2_p"]
+      }
+    ],
+    "variables_and_units":
+    [
+      ["t_start", "second", "access", "constant"],
+      ["C_O2_min", "dimensionless", "access", "constant"],
+      ["C_O2_max", "dimensionless", "access", "constant"],
+      ["C_CO2_min", "dimensionless", "access", "constant"],
+      ["C_CO2_max", "dimensionless", "access", "constant"],
+      ["C_O2_p", "dimensionless", "access", "variable"],
+      ["C_CO2_p", "dimensionless", "access", "variable"]
+    ]
+  },
   {
     "vessel_type":"arterial_simple",
     "BC_type":"vp",
@@ -2780,7 +2907,7 @@
       ["F_CO2_D", "dimensionless", "access", "variable"],
       ["F_O2_D", "dimensionless", "access", "variable"],
       ["F_CO2_A", "dimensionless", "access", "variable"],
-      ["F_O2_A", "dimensionless", "access", "variable"],
+      ["F_O2_A", "dimensionless", "access", "constant"],
       ["P_CO2_A", "J_per_m3", "access", "variable"],
       ["P_O2_A", "J_per_m3", "access", "variable"]
     ]
