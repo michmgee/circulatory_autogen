@@ -1,42 +1,147 @@
-[
-  { "variable": "ascending_aorta_A/u",
-    "data_type": "constant",
-    "unit": "J_per_m3",
-    "weight": 1.0,
-    "obs_type": "mean",
-    "value": 12000,
-    "std": 1000
+{
+  "protocol_info": {
+    "pre_times": [
+      40.6,
+      40.6
+    ],
+    "sim_times": [ 
+      [
+        6.0,
+        6.0
+      ]
+    ],
+    "params_to_change": {
+      "respiratory_gt/F_O2_i": [
+        [
+          0.21,
+          0.096
+        ]
+      ]
+    },
+    "experiment_labels": [
+      "FO2_i_0_210"
+    ]
   },
-  { "variable": "ascending_aorta_A/u",
-    "data_type": "constant",
-    "unit": "J_per_m3",
-    "weight": 1.0,
-    "obs_type": "max",
-    "value": 16000,
-    "std": 14000
-  },
-  { "variable": "ascending_aorta_A/u",
-    "data_type": "constant",
-    "unit": "J_per_m3",
-    "weight": 1.0,
-    "obs_type": "min",
-    "value": 10600,
-    "std": 1000
-  },
-  { "variable": "ascending_aorta_A/v",
-    "data_type": "constant",
-    "unit": "m3_per_s",
-    "weight": 1.0,
-    "obs_type": "mean",
-    "value": 7.2e-5,
-    "std": 7.2e-6
-  },
-  { "variable": "heart/q_lv",
-    "data_type": "constant",
-    "unit": "m3",
-    "weight": 1.0,
-    "obs_type": "max",
-    "value": 1.5e-4,
-    "std": 1.5e-5
-  }
-]
+    "data_items": [
+    { "variable": "ascending_aorta_A/u",
+      "data_type": "constant",
+      "unit": "J_per_m3",
+      "weight": 1.0,
+      "obs_type": "mean",
+      "value": 12000,
+      "std": 1000,
+      "name_for_plotting": "u_aaMean"
+    },
+    { "variable": "ascending_aorta_A/u",
+      "data_type": "constant",
+      "unit": "J_per_m3",
+      "weight": 1.0,
+      "obs_type": "max",
+      "value": 16000,
+      "std": 1000,
+      "name_for_plotting": "u_aaMax"
+    },
+    { "variable": "ascending_aorta_A/u",
+      "data_type": "constant",
+      "unit": "J_per_m3",
+      "weight": 1.0,
+      "obs_type": "min",
+      "value": 10600,
+      "std": 1000,
+      "name_for_plotting": "u_aaMin"
+    },
+    { "variable": "ascending_aorta_A/v",
+      "data_type": "constant",
+      "unit": "m3_per_s",
+      "weight": 1.0,
+      "obs_type": "mean",
+      "value": 7.2e-5,
+      "std": 7.2e-6,
+      "name_for_plotting": "v_aa"
+    },
+    { "variable": "heart/q_lv",
+      "data_type": "constant",
+      "unit": "m3",
+      "weight": 1.0,
+      "obs_type": "max",
+      "value": 1.5e-4,
+      "std": 1.5e-5,
+      "name_for_plotting": "q_lv"
+    },
+    { "variable": "venous_svc/u",
+      "data_type": "constant",
+      "unit": "J_per_m3",
+      "weight": 1.0,
+      "obs_type": "mean",
+      "value": 1330,
+      "std": 100,
+      "name_for_plotting": "venousSVC_u"
+    },
+    { "variable": "arterial_chemoreceptor/S_O2_a",
+      "data_type": "constant",
+      "unit": "dimensionless",
+      "weight": 1.0,
+      "obs_type": "mean",
+      "value": 0.98,
+      "std": 0.05,
+      "name_for_plotting": "arterialChemoR_SO2a"
+    },
+    { "variable": "heart/T_wCont",
+      "data_type": "constant",
+      "operation": "init_mean",
+      "operands": [
+        "heart/T_wCont"
+      ],
+      "unit": "s",
+      "weight": 10.0,
+      "obs_type": "mean",
+      "value": 1,
+      "std": 0.05,
+      "experiment_idx": 0,
+      "subexperiment_idx": 0,
+      "name_for_plotting": "T_normoxia"
+    },
+    { "variable": "brachial_L82/u",
+      "data_type": "constant",
+      "operation": "init_max",
+      "operands": [
+        "brachial_L82/u"
+      ],
+      "unit": "J_per_m3",
+      "weight": 3.0,
+      "experiment_idx": 0,
+      "subexperiment_idx": 0,
+      "value": 12000,
+      "std": 1000,
+      "name_for_plotting": "brachialL82_uSBPnormoxia"
+    },
+    { "variable": "heart/T_wCont",
+      "data_type": "constant",
+      "operation": "init_mean",
+      "operands": [
+        "heart/T_wCont"
+      ],
+      "unit": "s",
+      "weight": 10.0,
+      "value": 0.73,
+      "std": 0.09,
+      "experiment_idx": 0,
+      "subexperiment_idx": 1,
+      "name_for_plotting": "T_hypoxia"
+    },
+    { "variable": "brachial_L82/u",
+      "data_type": "constant",
+      "operation": "ss_max",
+      "operands": [
+        "brachial_L82/u"
+      ],
+      "unit": "J_per_m3",
+      "weight": 3.0,
+      "value": 15200,
+      "std": 400,
+      "experiment_idx": 0,
+      "subexperiment_idx": 1,
+      "name_for_plotting": "brachialL82_uSBPhypoxia"
+    }
+  ]
+}

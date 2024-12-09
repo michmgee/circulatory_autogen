@@ -1,4 +1,8 @@
 vessel_name,                  param_name,       param_type,  min,        max,     name_for_plotting
-heart,E_lv_A,const,7.10E+07,3.20E+08,E_{lv_A}
-heart,E_lv_B,const,7.10E+07,3.20E+08,E_{lv_B}
-heart,q_lv_init,const,1.50E-04,0.015,q_{lv_init}
+common_carotid_L_baro,P_nom,const,12399,16000,Pnom_{common_carotid_L_baro}
+common_carotid_L_baro,k_ab,const,1567,1667,kab_{common_carotid_L_baro}
+sympathetic_efferent,W_cs,const,10.56,20.56,Wcs_{sympathetic_efferent}
+sympathetic_efferent,W_bs,const,-1.1375,-0.5,Wbs_{sympathetic_efferent}
+heart_period_effector,G_Ts,const,-0.8,-0.0985,G_{Ts}
+trunk_resistance_effector,G_theta,const,46350000,9.27E+07,G_{theta_trunk}
+arm_leg_resistance_effector,G_theta,const,164500000,3.29E+08,G_{theta_arm_leg}
