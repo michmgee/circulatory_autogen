@@ -95,7 +95,7 @@ tSim = x.tSim - pre_time
 result = x.get_results(names) # x.get_results(array[i])  # Get the result
 print(result)
 
-filenames = ['arterial_chemoreceptor-S_O2_a096', 'heart-T_wCont096','respiratoryGT-FO2_A096','arterial_chemoreceptor-phi_apc096', 'NTS-f_NTS_ch096','NTS-f_NTS_cp096','NA-f_NA096','heart_period_effector-Delta_Tv096', 'NTS-f_NTS_ls096', 'NTS-f_NTS_br096','cardiopulm_receptor-P_pv_P_thor096', 'arm_leg_resistance_effector-Delta_theta096','venous_ub-q_us_wCont096', 'external_carotid_R_LC-C_O2_096','brachial_L82-u096','chemoreceptor-f_apc096','venous_us_volume_effector-f_s096']
+filenames = ['arterial_chemoreceptor-S_O2_a21', 'heart-T_wCont21','respiratoryGT-FO2_A21','arterial_chemoreceptor-phi_apc21', 'NTS-f_NTS_ch21','NTS-f_NTS_cp21','NA-f_NA21','heart_period_effector-Delta_Tv21', 'NTS-f_NTS_ls21', 'NTS-f_NTS_br21','cardiopulm_receptor-P_pv_P_thor21', 'arm_leg_resistance_effector-Delta_theta21','venous_ub-q_us_wCont21', 'external_carotid_R_LC-C_O2_21','brachial_L82-u21','chemoreceptor-f_apc21','venous_us_volume_effector-f_s21']
 # 'arm_R_T-u', 'respiratoryGT-PO2_A',
 for i in range(len(names)):
     #print(names[i])
