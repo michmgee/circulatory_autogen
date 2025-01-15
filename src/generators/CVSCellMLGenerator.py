@@ -69,7 +69,7 @@ class CVS0DCellMLGenerator(object):
         #    Code to generate model files
         self.__generate_units_file()
         self.__generate_CellML_file()
-        if self.model.param_id_consts:
+        if self.model.param_id_name_and_vals:
             self.__modify_parameters_array_from_param_id()
         self.__generate_parameters_csv()
         self.__generate_parameters_file()
@@ -227,7 +227,7 @@ class CVS0DCellMLGenerator(object):
     def __modify_parameters_array_from_param_id(self):
         # first modify param_const names easily by modifying them in the array
         print('modifying constants to values identified from parameter id')
-        for const_name, val in self.model.param_id_consts:
+        for const_name, val in self.model.param_id_name_and_vals:
             self.model.parameters_array[np.where(self.model.parameters_array['variable_name'] ==
                                            const_name)[0][0]]['value'] = f'{val:.10e}'
             self.model.parameters_array[np.where(self.model.parameters_array['variable_name'] ==
@@ -282,9 +282,6 @@ class CVS0DCellMLGenerator(object):
                             self.all_units.append(re.search('units name="(.*?)"', line).group(1))
 
     def __generate_modules_file(self):
-        if self.model.param_id_states:
-            # create list to check if all states get modified to param_id values
-            state_modified = [False]*len(self.model.param_id_states) #  whether this state has been found and modified
         print(f'Generating modules file {self.filename_prefix}_modules.cellml')
         with open(os.path.join(self.output_dir, f'{self.filename_prefix}_modules.cellml'), 'w') as wf:
             # write first two lines
@@ -556,6 +553,7 @@ class CVS0DCellMLGenerator(object):
                             # We map the ivc to a zero flow mapping
                             self.__write_mapping(wf, 'zero_flow_module', 'heart_module', ['v_zero'], ['v_ivc'])
                             self.ivc_connection_done = 1
+                            self.BC_set[out_module]['v_ivc'] = True
                             # TODO the above isnt robust
                         
                         for heart_inp_idx in range(3):
@@ -679,16 +677,13 @@ class CVS0DCellMLGenerator(object):
                 if len(out_vessel_names) == 0:
                     # there is no venous compartment connected to this terminal but still create a terminal venous section
                     pass
-                elif len(out_vessel_names) > 1:
-                    print(f'Terminal {vessel_name} has more than one venous compartment connected to it, '
-                          f'which is currently not allowed. Exiting')
-                    exit()
                 else:
-                    # map pressure between terminal and first venous compartment
-                    u_1 = 'u_out'
-                    u_2 = 'u'
-                    self.__write_mapping(wf, vessel_name+'_module', out_vessel_names[0]+'_module',
-                                        [u_1], [u_2])
+                    # map pressure between terminal and first venous compartments
+                    for out_vessel_idx in range(len(out_vessel_names)):
+                        u_1 = 'u_out'
+                        u_2 = 'u'
+                        self.__write_mapping(wf, vessel_name+'_module', out_vessel_names[out_vessel_idx]+'_module',
+                                            [u_1], [u_2])
 
                 # then map variables between connection and the venous sections
                 v_1 = 'v_T'

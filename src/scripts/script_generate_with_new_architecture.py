@@ -16,8 +16,7 @@ user_inputs_dir= os.path.join(root_dir, 'user_run_files')
 
 from parsers.ModelParsers import CSV0DModelParser
 from generators.CVSCellMLGenerator import CVS0DCellMLGenerator
-# TODO Cpp generator is commented out for now in the no_libcellml version
-# from generators.CVSCppGenerator import CVS0DCppGenerator
+from generators.CVSCppGenerator import CVS0DCppGenerator
 
 
 def generate_with_new_architecture(do_generation_with_fit_parameters,
@@ -25,7 +24,7 @@ def generate_with_new_architecture(do_generation_with_fit_parameters,
     if inp_data_dict is None:
         with open(os.path.join(user_inputs_dir, 'user_inputs.yaml'), 'r') as file:
             inp_data_dict = yaml.load(file, Loader=yaml.FullLoader)
-        if inp_data_dict["user_inputs_path_override"]:
+        if "user_inputs_path_override" in inp_data_dict.keys() and inp_data_dict["user_inputs_path_override"]:
             if os.path.exists(inp_data_dict["user_inputs_path_override"]):
                 with open(inp_data_dict["user_inputs_path_override"], 'r') as file:
                     inp_data_dict = yaml.load(file, Loader=yaml.FullLoader)
@@ -56,7 +55,7 @@ def generate_with_new_architecture(do_generation_with_fit_parameters,
     if do_generation_with_fit_parameters:
         param_id_obs_path = inp_data_dict['param_id_obs_path']
         param_id_method = inp_data_dict['param_id_method']
-        data_str_addon = re.sub('\.json', '', os.path.split(param_id_obs_path)[1])
+        data_str_addon = re.sub('.json', '', os.path.split(param_id_obs_path)[1])
         param_id_output_dir_abs_path = os.path.join(param_id_output_dir, param_id_method + f'_{file_prefix}_{data_str_addon}')
         parser = CSV0DModelParser(vessels_csv_abs_path, parameters_csv_abs_path, 
                                   param_id_output_dir_abs_path)

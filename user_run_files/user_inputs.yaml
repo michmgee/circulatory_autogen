@@ -23,48 +23,45 @@ param_id_method: genetic_algorithm
 # pre_time is the amount of time simulated to get to steady state
 # TODO this is not important if it is specified in the obs_data.json file
 # TODO I should remove it here and only specify in the obs_data.json file?
-# pre_time: 3.0
-pre_time: 15.6 # TODO change back to 15.6
+pre_time: 20   
 # sim_time is the amount of simulation time where the outputs are compared to ground truth
-sim_time: 2.0
+# NOTE: If doing freq domain fitting make sure the simulation is periodic and the sim time is the period.
+sim_time: 2
 
 # specifying number of heart periods has been made obsolete. If you want to do this, do it when preprocessing
 # and set the pre_time and sim_time accordingly.
 
-# specify the observable data file path used for parameter identification
-param_id_obs_path: /lustre/ogunnaike/users/2420/matlab_example/circulatory_autogen/circulatory_autogen_devel_nolibcellml/resources/control_parasymp_obs_data.json
-#
 # it is recommended that users create their own CA_user directory to store input resources and output generated model files. e.g.
 # resources_dir: /home/farg967/Documents/git_projects/CA_user/3compartment/resources
 # generated_models_dir: /home/farg967/Documents/git_projects/CA_user/3compartment/generated_models
 # param_id_output_dir: /home/farg967/Documents/git_projects/CA_user/3compartment/param_id_output
-# param_id_obs_path: /home/farg967/Documents/git_projects/CA_user/3compartment/resources/3compartment_obs_data.json
 
 # This is for cpp generation
 cpp_generated_models_dir: /home/farg967/software/venous_system/lucas_model/fvm
 # This is for cpp_coupling
 couple_to_1d: false
-cpp_1d_model_config_path: /home/farg967/software/venous_system/lucas_model/aortic_bif_coupling/run_dir/input1d.dat
+cpp_1d_model_config_path: 
+  /home/farg967/software/venous_system/lucas_model/aortic_bif_coupling/run_dir/input1d.dat
 
 # Output time step (sampling) 
-dt: 0.0001 # 0.0001
+dt: 0.01
 # These are inputs to solver_properties of the solver
 solver_info:
   # Maximum time step for solver
   MaximumStep: 0.0001 # 0.0001
   MaximumNumberOfSteps: 5000 #5000
 
-    # This for 3compartment
-# param_id_obs_path: /home/farg967/Documents/git_projects/circulatory_autogen/resources/3compartment_obs_data.json
+# This for 3compartment
+param_id_obs_path: /home/farg967/Documents/git_projects/circulatory_autogen/resources/3compartment_obs_data.json
 
 #_______ sensitivity analysis inputs __________
 do_sensitivity: false
 
 #______ genetic algorithm inputs ___________
 ga_options:
-  # TODO Should we move cost_type to obs_data.json file so each observable can have a specified cost function calculation?
-  # TODO This should eventually be a user_defined cost_function. 
-  cost_type: MSE
+  cost_type: MSE # This should be defined for each entry in the
+                 # obs_data.json file instead. Currently if there is no cost_type entry in the
+                 # obs_data.json entry, it will be set to this entry
   # maximum number of calls to the forward function during one run of the param_id_method
   num_calls_to_function: 5000 #5000
   cost_convergence: 0.001
@@ -75,7 +72,7 @@ debug_ga_options:
   cost_convergence: 0.001
 
 #______ mcmc inputs ___________
-do_mcmc: False
+do_mcmc: false
 mcmc_options:
   num_steps: 100 #1000
   num_walkers: 64

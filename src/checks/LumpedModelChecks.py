@@ -76,11 +76,32 @@ class LumpedIDParamsCheck(AbstractLumpedCheck):
         Executes all check activities.
         :param model_0D: model to be checked.
         '''
-        for const_name, _ in model_0D.param_id_consts:
+        for const_name, _ in model_0D.param_id_name_and_vals:
             if not const_name in model_0D.parameters_array['variable_name']:
                 print(f'ERROR parameter id constant of {const_name} is not defined in the parameters file')
                 exit()
 
+class LumpedPortVariableCheck(AbstractLumpedCheck):
+    '''
+    Checks if the port variables are defined in the module config variables.
+    # TODO this should be in the json schema for the module_config.json
+    '''
+
+    def execute(self, model_0D):
+        '''
+        Executes all check activities.
+        :param model_0D: model to be checked.
+        '''
+        model_0D.vessels_df.apply(self.execute_for_row, args=(model_0D, ), axis=1)
+
+    def execute_for_row(self, vessel_row, model_0D):
+        variables_list = [vessel_row["variables_and_units"][II][0] for II in range(len(vessel_row["variables_and_units"]))]
+        for port in vessel_row["entrance_ports"] + vessel_row["exit_ports"]:
+            for port_variable in port["variables"]:
+                if port_variable not in variables_list:
+                    print(f'the port variable {port_variable} '
+                        f'is not a variable for vessel type: {vessel_row["vessel_type"]}, BC_type: {vessel_row["BC_type"]}')
+                    exit()
 
 #    Example of usage
 #    Contructs a multiple check with only a LumpedBCVesselCheck 
