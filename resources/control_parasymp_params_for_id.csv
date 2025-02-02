@@ -1,8 +1,10 @@
 vessel_name,                  param_name,       param_type,  min,        max,     name_for_plotting
-common_carotid_L_baro,P_nom,const,12399,16000,Pnom_{common_carotid_L_baro}
-common_carotid_L_baro,k_ab,const,1567,1667,kab_{common_carotid_L_baro}
-sympathetic_efferent,W_cs,const,10.56,20.56,Wcs_{sympathetic_efferent}
-sympathetic_efferent,W_bs,const,-1.1375,-0.5,Wbs_{sympathetic_efferent}
-heart_period_effector,G_Ts,const,-0.8,-0.0985,G_{Ts}
-trunk_resistance_effector,G_theta,const,46350000,9.27E+07,G_{theta_trunk}
-arm_leg_resistance_effector,G_theta,const,164500000,3.29E+08,G_{theta_arm_leg}
+heart, E_lv_A,const,1.50E+08,3.50E+08, E_{lv}
+common_carotid_L_baro,k_ab,const,1500,1700,kab_{common_carotid_L_baro}
+sympathetic_efferent,W_cs,const,10,20,Wcs_{sympathetic_efferent}
+sympathetic_efferent,W_bs,const,-1.5,-0.5,Wbs_{sympathetic_efferent}
+heart_period_effector,G_Ts,const,-0.8,-0.2,G_{Ts}
+heart_period_effector,G_Tv,const,-0.4,-0.1,G_{Ts}
+venous_constriction_effector,G_theta_compliance,const,-1.00E-06,-1.00E-07,G_{theta_Cven}
+venous_lb venous_ub venous_ivc venous_svc, C,,5.00E-06,1.20E-05, C_{ven}
+ascending_aorta_A ascending_aorta_B ascending_aorta_C ascending_aorta_D, E,,1.00E+05,6.00E+05, E_{AR}

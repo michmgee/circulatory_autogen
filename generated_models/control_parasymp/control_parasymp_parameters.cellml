@@ -1,0 +1,839 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<model name="Parameters" xmlns="http://www.cellml.org/cellml/1.1#" xmlns:cellml="http://www.cellml.org/cellml/1.1#" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;parameter_units&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;//-->
+<import xlink:href="control_parasymp_units.cellml">
+    <units name="s2" units_ref="s2"/>
+    <units name="Hz" units_ref="Hz"/>
+    <units name="millis" units_ref="millis"/>
+    <units name="per_millis" units_ref="per_millis"/>
+    <units name="mm" units_ref="mm"/>
+    <units name="m2" units_ref="m2"/>
+    <units name="mm2" units_ref="mm2"/>
+    <units name="m3" units_ref="m3"/>
+    <units name="m4" units_ref="m4"/>
+    <units name="mm3" units_ref="mm3"/>
+    <units name="J_per_s" units_ref="J_per_s"/>
+    <units name="mol_per_s" units_ref="mol_per_s"/>
+    <units name="mmol_per_s" units_ref="mmol_per_s"/>
+    <units name="umol_per_s" units_ref="umol_per_s"/>
+    <units name="C_per_s" units_ref="C_per_s"/>
+    <units name="mC_per_s" units_ref="mC_per_s"/>
+    <units name="uC_per_s" units_ref="uC_per_s"/>
+    <units name="nC_per_s" units_ref="nC_per_s"/>
+    <units name="Cm_per_millis" units_ref="Cm_per_millis"/>
+    <units name="m_per_s" units_ref="m_per_s"/>
+    <units name="mm_per_s" units_ref="mm_per_s"/>
+    <units name="um_per_s" units_ref="um_per_s"/>
+    <units name="rad_per_s" units_ref="rad_per_s"/>
+    <units name="m3_per_s" units_ref="m3_per_s"/>
+    <units name="milliL" units_ref="milliL"/>
+    <units name="per_milliL_s" units_ref="per_milliL_s"/>
+    <units name="s_per_m3" units_ref="s_per_m3"/>
+    <units name="s_per_milliV" units_ref="s_per_milliV"/>
+    <units name="s_per_millis" units_ref="s_per_millis"/>
+    <units name="millis_per_s" units_ref="millis_per_s"/>
+    <units name="mm3_per_s" units_ref="mm3_per_s"/>
+    <units name="l_per_s" units_ref="l_per_s"/>
+    <units name="per_ml_s" units_ref="per_ml_s"/>
+    <units name="per_m3_s" units_ref="per_m3_s"/>
+    <units name="J_per_mol" units_ref="J_per_mol"/>
+    <units name="J_per_kmol_K" units_ref="J_per_kmol_K"/>
+    <units name="J_per_M" units_ref="J_per_M"/>
+    <units name="J_per_C" units_ref="J_per_C"/>
+    <units name="J_per_C_s" units_ref="J_per_C_s"/>
+    <units name="J_per_m" units_ref="J_per_m"/>
+    <units name="J_per_m3" units_ref="J_per_m3"/>
+    <units name="mmHg" units_ref="mmHg"/>
+    <units name="m3_per_J" units_ref="m3_per_J"/>
+    <units name="J_per_m3s" units_ref="J_per_m3s"/>
+    <units name="m3_per_Js" units_ref="m3_per_Js"/>
+    <units name="J2_per_m6" units_ref="J2_per_m6"/>
+    <units name="Js2_per_C2" units_ref="Js2_per_C2"/>
+    <units name="Js2_per_mol2" units_ref="Js2_per_mol2"/>
+    <units name="Js_per_mol2" units_ref="Js_per_mol2"/>
+    <units name="Js_per_C2" units_ref="Js_per_C2"/>
+    <units name="J_per_mol2" units_ref="J_per_mol2"/>
+    <units name="C2_per_J_s" units_ref="C2_per_J_s"/>
+    <units name="J_per_C2" units_ref="J_per_C2"/>
+    <units name="C2_per_J" units_ref="C2_per_J"/>
+    <units name="mol_per_m3" units_ref="mol_per_m3"/>
+    <units name="M" units_ref="M"/>
+    <units name="mM" units_ref="mM"/>
+    <units name="uM" units_ref="uM"/>
+    <units name="kg_per_m3" units_ref="kg_per_m3"/>
+    <units name="m3_per_kg" units_ref="m3_per_kg"/>
+    <units name="per_m3" units_ref="per_m3"/>
+    <units name="mol_per_m2_s" units_ref="mol_per_m2_s"/>
+    <units name="mM_m_per_s" units_ref="mM_m_per_s"/>
+    <units name="J_per_m2_s" units_ref="J_per_m2_s"/>
+    <units name="Js_per_m4" units_ref="Js_per_m4"/>
+    <units name="mM_per_s" units_ref="mM_per_s"/>
+    <units name="per_s" units_ref="per_s"/>
+    <units name="per_mM_s" units_ref="per_mM_s"/>
+    <units name="m6_per_mol2_s" units_ref="m6_per_mol2_s"/>
+    <units name="m3_per_mol" units_ref="m3_per_mol"/>
+    <units name="mol_per_m3_s" units_ref="mol_per_m3_s"/>
+    <units name="per_mol" units_ref="per_mol"/>
+    <units name="J_per_mol_K" units_ref="J_per_mol_K"/>
+    <units name="C_per_mol" units_ref="C_per_mol"/>
+    <units name="m2_per_s" units_ref="m2_per_s"/>
+    <units name="per_C" units_ref="per_C"/>
+    <units name="per_m" units_ref="per_m"/>
+    <units name="per_mM" units_ref="per_mM"/>
+    <units name="Js2_per_m2" units_ref="Js2_per_m2"/>
+    <units name="Js_per_m2" units_ref="Js_per_m2"/>
+    <units name="J_per_m2" units_ref="J_per_m2"/>
+    <units name="m_per_s2" units_ref="m_per_s2"/>
+    <units name="rad_per_s2" units_ref="rad_per_s2"/>
+    <units name="Js_per_m3" units_ref="Js_per_m3"/>
+    <units name="Js2_per_m5" units_ref="Js2_per_m5"/>
+    <units name="m5_per_Js2" units_ref="m5_per_Js2"/>
+    <units name="J_per_m6" units_ref="J_per_m6"/>
+    <units name="m6_per_J" units_ref="m6_per_J"/>
+    <units name="m6_per_Js" units_ref="m6_per_Js"/>
+    <units name="mm6_per_J" units_ref="mm6_per_J"/>
+    <units name="Js2_per_m9" units_ref="Js2_per_m9"/>
+    <units name="m6s_per_J" units_ref="m6s_per_J"/>
+    <units name="Js_per_m6" units_ref="Js_per_m6"/>
+    <units name="Js2_per_m6" units_ref="Js2_per_m6"/>
+    <units name="m3_per_s2" units_ref="m3_per_s2"/>
+    <units name="mm3_per_s2" units_ref="mm3_per_s2"/>
+    <units name="per_mm3" units_ref="per_mm3"/>
+    <units name="UnitValve" units_ref="UnitValve"/>
+    <units name="J_per_m9" units_ref="J_per_m9"/>
+    <units name="milliV" units_ref="milliV"/>
+    <units name="per_milliV" units_ref="per_milliV"/>
+    <units name="millis_per_milliV" units_ref="millis_per_milliV"/>
+    <units name="per_V" units_ref="per_V"/>
+    <units name="milliV_per_V" units_ref="milliV_per_V"/>
+    <units name="V_per_milliV" units_ref="V_per_milliV"/>
+    <units name="milliV_per_kiloV" units_ref="milliV_per_kiloV"/>
+    <units name="V2" units_ref="V2"/>
+    <units name="milliV2" units_ref="milliV2"/>
+    <units name="millimol" units_ref="millimol"/>
+    <units name="millimolar" units_ref="millimolar"/>
+    <units name="per_millimolar" units_ref="per_millimolar"/>
+    <units name="per_millimolar_s" units_ref="per_millimolar_s"/>
+    <units name="per_millimolar2_s" units_ref="per_millimolar2_s"/>
+    <units name="millimolar_per_s" units_ref="millimolar_per_s"/>
+    <units name="millimolar_per_megamolar" units_ref="millimolar_per_megamolar"/>
+    <units name="per_millimol_milliS" units_ref="per_millimol_milliS"/>
+    <units name="per_millimol_millis" units_ref="per_millimol_millis"/>
+    <units name="per_millimol_s" units_ref="per_millimol_s"/>
+    <units name="microm" units_ref="microm"/>
+    <units name="microS" units_ref="microS"/>
+    <units name="microm3" units_ref="microm3"/>
+    <units name="m3_per_microm3" units_ref="m3_per_microm3"/>
+    <units name="picoF" units_ref="picoF"/>
+    <units name="S_per_F" units_ref="S_per_F"/>
+    <units name="m3_per_Fs" units_ref="m3_per_Fs"/>
+    <units name="A_per_F" units_ref="A_per_F"/>
+    <units name="megaOhm" units_ref="megaOhm"/>
+    <units name="nanoA" units_ref="nanoA"/>
+    <units name="nanoA_per_milliA" units_ref="nanoA_per_milliA"/>
+    <units name="A_per_nanoA" units_ref="A_per_nanoA"/>
+    <units name="J_per_MK" units_ref="J_per_MK"/>
+    <units name="C_per_M" units_ref="C_per_M"/>
+    <units name="m3_per_J_millis" units_ref="m3_per_J_millis"/>
+    <units name="m3_per_M_millis" units_ref="m3_per_M_millis"/>
+    <units name="m3_per_millimol_s" units_ref="m3_per_millimol_s"/>
+    <units name="millimol_per_m3" units_ref="millimol_per_m3"/>
+    <units name="per_s2" units_ref="per_s2"/>
+    <units name="Hz2" units_ref="Hz2"/>
+    <units name="cm" units_ref="cm"/>
+    <units name="J_per_m4_s" units_ref="J_per_m4_s"/>
+    <units name="m3_per_mol_per_sec" units_ref="m3_per_mol_per_sec"/>
+    <units name="mol_per_m3_per_kPa" units_ref="mol_per_m3_per_kPa"/>
+</import>
+<component name="parameters_global">
+<variable initial_value="1998.5" name="k_1" public_interface="out" units="J_per_m3"/>
+<variable initial_value="25917.4" name="k_2" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0.3836" name="h_1" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.819" name="h_2" public_interface="out" units="dimensionless"/>
+<variable initial_value="2.40E-04" name="alpha_1" public_interface="out" units="m3_per_J"/>
+<variable initial_value="4.19E-04" name="alpha_2" public_interface="out" units="m3_per_J"/>
+<variable initial_value="6.21E-05" name="beta_1" public_interface="out" units="m3_per_J"/>
+<variable initial_value="2.44E-05" name="beta_2" public_interface="out" units="m3_per_J"/>
+<variable initial_value="0.20448" name="C_O2_sat" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.9564" name="C_CO2_sat" public_interface="out" units="dimensionless"/>
+<variable initial_value="101300" name="P_atm" public_interface="out" units="J_per_m3"/>
+<variable initial_value="6266.15" name="P_ws" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="P_m" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1050" name="rho" public_interface="out" units="Js2_per_m5"/>
+<variable initial_value="1" name="T" public_interface="out" units="second"/>
+<variable initial_value="0.25" name="T_min" public_interface="out" units="second"/>
+<variable initial_value="4.00E-06" name="q_ra_us" public_interface="out" units="m3"/>
+<variable initial_value="1.00E-05" name="q_rv_us" public_interface="out" units="m3"/>
+<variable initial_value="4.00E-06" name="q_la_us" public_interface="out" units="m3"/>
+<variable initial_value="5.00E-06" name="q_lv_us" public_interface="out" units="m3"/>
+<variable initial_value="4.00E-06" name="q_ra_init" public_interface="out" units="m3"/>
+<variable initial_value="0.5E-03" name="q_rv_init" public_interface="out" units="m3"/>
+<variable initial_value="4.00E-06" name="q_la_init" public_interface="out" units="m3"/>
+<variable initial_value="0.5E-03" name="q_lv_init" public_interface="out" units="m3"/>
+<variable initial_value="0.17" name="T_ac" public_interface="out" units="second"/>
+<variable initial_value="0.17" name="T_ar" public_interface="out" units="second"/>
+<variable initial_value="0.8" name="t_astart" public_interface="out" units="second"/>
+<variable initial_value="0.34" name="T_vc" public_interface="out" units="second"/>
+<variable initial_value="0.15" name="T_vr" public_interface="out" units="second"/>
+<variable initial_value="0" name="t_vstart" public_interface="out" units="second"/>
+<variable initial_value="8.00E+06" name="E_ra_A" public_interface="out" units="J_per_m6"/>
+<variable initial_value="9.33E+06" name="E_ra_B" public_interface="out" units="J_per_m6"/>
+<variable initial_value="60E+06" name="E_rv_A" public_interface="out" units="J_per_m6"/>
+<variable initial_value="0.2e6" name="E_rv_B" public_interface="out" units="J_per_m6"/>
+<variable initial_value="9.33E+06" name="E_la_A" public_interface="out" units="J_per_m6"/>
+<variable initial_value="1.20E+07" name="E_la_B" public_interface="out" units="J_per_m6"/>
+<variable initial_value="3.50E+08" name="E_lv_A" public_interface="out" units="J_per_m6"/>
+<variable initial_value="20e6" name="E_lv_B" public_interface="out" units="J_per_m6"/>
+<variable initial_value="0.3" name="K_vo_trv" public_interface="out" units="m3_per_Js"/>
+<variable initial_value="0.2" name="K_vo_puv" public_interface="out" units="m3_per_Js"/>
+<variable initial_value="0.3" name="K_vo_miv" public_interface="out" units="m3_per_Js"/>
+<variable initial_value="0.12" name="K_vo_aov" public_interface="out" units="m3_per_Js"/>
+<variable initial_value="0.4" name="K_vc_trv" public_interface="out" units="m3_per_Js"/>
+<variable initial_value="0.2" name="K_vc_puv" public_interface="out" units="m3_per_Js"/>
+<variable initial_value="0.4" name="K_vc_miv" public_interface="out" units="m3_per_Js"/>
+<variable initial_value="0.12" name="K_vc_aov" public_interface="out" units="m3_per_Js"/>
+<variable initial_value="0" name="M_rg_trv" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="M_rg_puv" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="M_rg_miv" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="M_rg_aov" public_interface="out" units="dimensionless"/>
+<variable initial_value="1" name="M_st_trv" public_interface="out" units="dimensionless"/>
+<variable initial_value="1" name="M_st_puv" public_interface="out" units="dimensionless"/>
+<variable initial_value="1" name="M_st_miv" public_interface="out" units="dimensionless"/>
+<variable initial_value="1" name="M_st_aov" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.02" name="l_eff" public_interface="out" units="metre"/>
+<variable initial_value="0.0008" name="A_nn_trv" public_interface="out" units="m2"/>
+<variable initial_value="0.00071" name="A_nn_puv" public_interface="out" units="m2"/>
+<variable initial_value="0.00077" name="A_nn_miv" public_interface="out" units="m2"/>
+<variable initial_value="0.00068" name="A_nn_aov" public_interface="out" units="m2"/>
+<variable initial_value="0" name="beta_g" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.004" name="mu" public_interface="out" units="Js_per_m3"/>
+<variable initial_value="9.81" name="g" public_interface="out" units="m_per_s2"/>
+<variable initial_value="0.2802" name="a_vessel" public_interface="out" units="dimensionless"/>
+<variable initial_value="-505.3" name="b_vessel" public_interface="out" units="per_m"/>
+<variable initial_value="0.1324" name="c_vessel" public_interface="out" units="dimensionless"/>
+<variable initial_value="-11.14" name="d_vessel" public_interface="out" units="per_m"/>
+<variable initial_value="1.50E+02" name="Hgb" public_interface="out" units="kg_per_m3"/>
+<variable initial_value="5332.8" name="P_CO2_a_nom" public_interface="out" units="J_per_m3"/>
+<variable initial_value="16.11" name="f_es_0" public_interface="out" units="per_s"/>
+<variable initial_value="2.1" name="f_es_inf" public_interface="out" units="per_s"/>
+<variable initial_value="60" name="f_es_max" public_interface="out" units="per_s"/>
+<variable initial_value="0.0675" name="k_es" public_interface="out" units="per_s"/>
+<variable initial_value="2.66" name="f_es_min" public_interface="out" units="per_s"/>
+<variable initial_value="19038" name="k_CO2_m" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0.155" name="C_O2_vm_nom" public_interface="out" units="dimensionless"/>
+<variable initial_value="10" name="tau_O2" public_interface="out" units="second"/>
+<variable initial_value="20" name="tau_CO2" public_interface="out" units="second"/>
+<variable initial_value="30" name="g_O2_m" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.14" name="C_O2_vb_nom" public_interface="out" units="dimensionless"/>
+<variable initial_value="10" name="g_O2_b" public_interface="out" units="dimensionless"/>
+<variable initial_value="20.9" name="A_b_lc" public_interface="out" units="dimensionless"/>
+<variable initial_value="92.8" name="B_b_lc" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.53E+15" name="C_b_lc" public_interface="out" units="dimensionless"/>
+<variable initial_value="-5.2551" name="D_b_lc" public_interface="out" units="dimensionless"/>
+</component>
+<component name="parameters">
+<variable initial_value="13660000" name="R_par" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="3.09E-10" name="C_par" public_interface="out" units="m6_per_J"/>
+<variable initial_value="0" name="u_ext_par" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.00E-06" name="I_par" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="1.00E-12" name="R_pcap" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.00E-12" name="C_pcap" public_interface="out" units="m6_per_J"/>
+<variable initial_value="0" name="u_ext_pcap" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.00E-06" name="I_pcap" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="2.00E-03" name="q_0_pulmonary_GE" public_interface="out" units="m3"/>
+<variable initial_value="4e-9" name="k_O2_pulmonary_GE" public_interface="out" units="m6_per_Js"/>
+<variable initial_value="8.20E-09" name="k_CO2_pulmonary_GE" public_interface="out" units="m6_per_Js"/>
+<variable initial_value="0.017" name="shunt_fraction_pulmonary_GE" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.21" name="F_O2_i_respiratory_gt" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.000421" name="F_CO2_i_respiratory_gt" public_interface="out" units="dimensionless"/>
+<variable initial_value="1" name="K_LOSSES_respiratory_gt" public_interface="out" units="dimensionless"/>
+<variable initial_value="-490" name="P_mus_min_lung" public_interface="out" units="J_per_m3"/>
+<variable initial_value="-490" name="P_plEE_lung" public_interface="out" units="J_per_m3"/>
+<variable initial_value="3.44E-05" name="q_l_us_lung" public_interface="out" units="m3"/>
+<variable initial_value="6.63E-06" name="q_t_us_lung" public_interface="out" units="m3"/>
+<variable initial_value="1.87E-05" name="q_b_us_lung" public_interface="out" units="m3"/>
+<variable initial_value="1.26E-06" name="q_A_us_lung" public_interface="out" units="m3"/>
+<variable initial_value="400058" name="R_ml_lung" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="132064" name="R_lt_lung" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="120017" name="R_tb_lung" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="32006" name="R_bA_lung" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="4.00E+04" name="R_plwall_lung" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.30E-08" name="C_l_lung" public_interface="out" units="m6_per_J"/>
+<variable initial_value="2.43E-08" name="C_t_lung" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.34E-06" name="C_b_lung" public_interface="out" units="m6_per_J"/>
+<variable initial_value="2.04E-05" name="C_A_lung" public_interface="out" units="m6_per_J"/>
+<variable initial_value="2.50E-06" name="C_pl_lung" public_interface="out" units="m6_per_J"/>
+<variable initial_value="5" name="T_resp_lung" public_interface="out" units="second"/>
+<variable initial_value="1" name="T_resp_min_lung" public_interface="out" units="second"/>
+<variable initial_value="0.6" name="IE_ratio_lung" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.33E+06" name="R_pvn" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="6.00E-09" name="C_pvn" public_interface="out" units="m6_per_J"/>
+<variable initial_value="0" name="u_ext_pvn" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.00E-06" name="I_pvn" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="1e-4" name="q_C_init_pvn" public_interface="out" units="m3"/>
+<variable initial_value="0" name="q_us_0_pvn" public_interface="out" units="m3"/>
+<variable initial_value="0" name="Delta_q_us_pvn" public_interface="out" units="m3"/>
+<variable initial_value="0" name="Delta_C_pvn" public_interface="out" units="m6_per_J"/>
+<variable initial_value="100000" name="E_ascending_aorta_A" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.53E-02" name="l_ascending_aorta_A" public_interface="out" units="metre"/>
+<variable initial_value="1.56E-02" name="r_ascending_aorta_A" public_interface="out" units="metre"/>
+<variable initial_value="0" name="theta_ascending_aorta_A" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_ascending_aorta_A" public_interface="out" units="J_per_m3"/>
+<variable initial_value="100000" name="E_ascending_aorta_B" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.48E-02" name="l_ascending_aorta_B" public_interface="out" units="metre"/>
+<variable initial_value="1.51E-02" name="r_ascending_aorta_B" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_ascending_aorta_B" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_ascending_aorta_B" public_interface="out" units="dimensionless"/>
+<variable initial_value="100000" name="E_ascending_aorta_C" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.48E-02" name="l_ascending_aorta_C" public_interface="out" units="metre"/>
+<variable initial_value="1.45E-02" name="r_ascending_aorta_C" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_ascending_aorta_C" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_ascending_aorta_C" public_interface="out" units="dimensionless"/>
+<variable initial_value="100000" name="E_ascending_aorta_D" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.48E-02" name="l_ascending_aorta_D" public_interface="out" units="metre"/>
+<variable initial_value="1.39E-02" name="r_ascending_aorta_D" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_ascending_aorta_D" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_ascending_aorta_D" public_interface="out" units="dimensionless"/>
+<variable initial_value="133642.1674" name="E_aortic_arch_C2" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.48E-02" name="l_aortic_arch_C2" public_interface="out" units="metre"/>
+<variable initial_value="1.33E-02" name="r_aortic_arch_C2" public_interface="out" units="metre"/>
+<variable initial_value="90" name="theta_aortic_arch_C2" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_aortic_arch_C2" public_interface="out" units="J_per_m3"/>
+<variable initial_value="133642.1674" name="E_aortic_arch_C46" public_interface="out" units="J_per_m3"/>
+<variable initial_value="9.61E-03" name="l_aortic_arch_C46" public_interface="out" units="metre"/>
+<variable initial_value="1.28E-02" name="r_aortic_arch_C46" public_interface="out" units="metre"/>
+<variable initial_value="90" name="theta_aortic_arch_C46" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_aortic_arch_C46" public_interface="out" units="J_per_m3"/>
+<variable initial_value="133642.1674" name="E_aortic_arch_C64" public_interface="out" units="J_per_m3"/>
+<variable initial_value="6.98E-03" name="l_aortic_arch_C64" public_interface="out" units="metre"/>
+<variable initial_value="1.24E-02" name="r_aortic_arch_C64" public_interface="out" units="metre"/>
+<variable initial_value="90" name="theta_aortic_arch_C64" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_aortic_arch_C64" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.00E+05" name="E_brachiocephalic_trunk_C4" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.74E-02" name="l_brachiocephalic_trunk_C4" public_interface="out" units="metre"/>
+<variable initial_value="6.42E-03" name="r_brachiocephalic_trunk_C4" public_interface="out" units="metre"/>
+<variable initial_value="0" name="theta_brachiocephalic_trunk_C4" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_brachiocephalic_trunk_C4" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.00E+05" name="E_subclavian_L66" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.95E-02" name="l_subclavian_L66" public_interface="out" units="metre"/>
+<variable initial_value="3.99E-03" name="r_subclavian_L66" public_interface="out" units="metre"/>
+<variable initial_value="90" name="theta_subclavian_L66" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_subclavian_L66" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.00E+05" name="E_subclavian_L78" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.11E-02" name="l_subclavian_L78" public_interface="out" units="metre"/>
+<variable initial_value="2.91E-03" name="r_subclavian_L78" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_subclavian_L78" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_subclavian_L78" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_brachial_L82" public_interface="out" units="J_per_m3"/>
+<variable initial_value="2.23E-01" name="l_brachial_L82" public_interface="out" units="metre"/>
+<variable initial_value="1.97E-03" name="r_brachial_L82" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_brachial_L82" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_brachial_L82" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_common_carotid_L48_A" public_interface="out" units="J_per_m3"/>
+<variable initial_value="3.03E-02" name="l_common_carotid_L48_A" public_interface="out" units="metre"/>
+<variable initial_value="4.37E-03" name="r_common_carotid_L48_A" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_common_carotid_L48_A" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_common_carotid_L48_A" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_common_carotid_L48_B" public_interface="out" units="J_per_m3"/>
+<variable initial_value="3.03E-02" name="l_common_carotid_L48_B" public_interface="out" units="metre"/>
+<variable initial_value="4.13E-03" name="r_common_carotid_L48_B" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_common_carotid_L48_B" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_common_carotid_L48_B" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_common_carotid_L48_C" public_interface="out" units="J_per_m3"/>
+<variable initial_value="3.03E-02" name="l_common_carotid_L48_C" public_interface="out" units="metre"/>
+<variable initial_value="3.92E-03" name="r_common_carotid_L48_C" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_common_carotid_L48_C" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_common_carotid_L48_C" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_common_carotid_L48_D" public_interface="out" units="J_per_m3"/>
+<variable initial_value="3.03E-02" name="l_common_carotid_L48_D" public_interface="out" units="metre"/>
+<variable initial_value="3.58E-03" name="r_common_carotid_L48_D" public_interface="out" units="metre"/>
+<variable initial_value="0" name="theta_common_carotid_L48_D" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_common_carotid_L48_D" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.00E+05" name="E_common_carotid_R6_A" public_interface="out" units="J_per_m3"/>
+<variable initial_value="2.71E-02" name="l_common_carotid_R6_A" public_interface="out" units="metre"/>
+<variable initial_value="4.43E-03" name="r_common_carotid_R6_A" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_common_carotid_R6_A" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_common_carotid_R6_A" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_common_carotid_R6_B" public_interface="out" units="J_per_m3"/>
+<variable initial_value="2.71E-02" name="l_common_carotid_R6_B" public_interface="out" units="metre"/>
+<variable initial_value="4.14E-03" name="r_common_carotid_R6_B" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_common_carotid_R6_B" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_common_carotid_R6_B" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_common_carotid_R6_C" public_interface="out" units="J_per_m3"/>
+<variable initial_value="2.71E-02" name="l_common_carotid_R6_C" public_interface="out" units="metre"/>
+<variable initial_value="3.65E-03" name="r_common_carotid_R6_C" public_interface="out" units="metre"/>
+<variable initial_value="0" name="theta_common_carotid_R6_C" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_common_carotid_R6_C" public_interface="out" units="J_per_m3"/>
+<variable initial_value="8.00E+05" name="E_external_carotid_L62" public_interface="out" units="J_per_m3"/>
+<variable initial_value="6.10E-02" name="l_external_carotid_L62" public_interface="out" units="metre"/>
+<variable initial_value="2.27E-03" name="r_external_carotid_L62" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_external_carotid_L62" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_external_carotid_L62" public_interface="out" units="dimensionless"/>
+<variable initial_value="8.00E+05" name="E_external_carotid_R26" public_interface="out" units="J_per_m3"/>
+<variable initial_value="6.10E-02" name="l_external_carotid_R26" public_interface="out" units="metre"/>
+<variable initial_value="2.27E-03" name="r_external_carotid_R26" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_external_carotid_R26" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_external_carotid_R26" public_interface="out" units="dimensionless"/>
+<variable initial_value="8.00E+05" name="E_internal_carotid_L50_A" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.50E-02" name="l_internal_carotid_L50_A" public_interface="out" units="metre"/>
+<variable initial_value="2.54E-03" name="r_internal_carotid_L50_A" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_internal_carotid_L50_A" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_internal_carotid_L50_A" public_interface="out" units="dimensionless"/>
+<variable initial_value="8.00E+05" name="E_internal_carotid_L50_B" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.50E-02" name="l_internal_carotid_L50_B" public_interface="out" units="metre"/>
+<variable initial_value="2.05E-03" name="r_internal_carotid_L50_B" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_internal_carotid_L50_B" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_internal_carotid_L50_B" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_internal_carotid_L50_C" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.50E-02" name="l_internal_carotid_L50_C" public_interface="out" units="metre"/>
+<variable initial_value="1.57E-03" name="r_internal_carotid_L50_C" public_interface="out" units="metre"/>
+<variable initial_value="0" name="theta_internal_carotid_L50_C" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_internal_carotid_L50_C" public_interface="out" units="J_per_m3"/>
+<variable initial_value="8.00E+05" name="E_internal_carotid_R8_A" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.50E-02" name="l_internal_carotid_R8_A" public_interface="out" units="metre"/>
+<variable initial_value="2.54E-03" name="r_internal_carotid_R8_A" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_internal_carotid_R8_A" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_internal_carotid_R8_A" public_interface="out" units="dimensionless"/>
+<variable initial_value="8.00E+05" name="E_internal_carotid_R8_B" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.50E-02" name="l_internal_carotid_R8_B" public_interface="out" units="metre"/>
+<variable initial_value="2.05E-03" name="r_internal_carotid_R8_B" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_internal_carotid_R8_B" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_internal_carotid_R8_B" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_internal_carotid_R8_C" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.50E-02" name="l_internal_carotid_R8_C" public_interface="out" units="metre"/>
+<variable initial_value="1.57E-03" name="r_internal_carotid_R8_C" public_interface="out" units="metre"/>
+<variable initial_value="0" name="theta_internal_carotid_R8_C" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_internal_carotid_R8_C" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.60E+06" name="E_posterior_communicating_L8" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.66E-02" name="l_posterior_communicating_L8" public_interface="out" units="metre"/>
+<variable initial_value="4.94E-04" name="r_posterior_communicating_L8" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_posterior_communicating_L8" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_posterior_communicating_L8" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_posterior_communicating_R206" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.66E-02" name="l_posterior_communicating_R206" public_interface="out" units="metre"/>
+<variable initial_value="4.94E-04" name="r_posterior_communicating_R206" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_posterior_communicating_R206" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_posterior_communicating_R206" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_internal_carotid_L112" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.97E-03" name="l_internal_carotid_L112" public_interface="out" units="metre"/>
+<variable initial_value="1.33E-03" name="r_internal_carotid_L112" public_interface="out" units="metre"/>
+<variable initial_value="90" name="theta_internal_carotid_L112" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_internal_carotid_L112" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.60E+06" name="E_internal_carotid_R48" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.97E-03" name="l_internal_carotid_R48" public_interface="out" units="metre"/>
+<variable initial_value="1.33E-03" name="r_internal_carotid_R48" public_interface="out" units="metre"/>
+<variable initial_value="90" name="theta_internal_carotid_R48" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_internal_carotid_R48" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.60E+06" name="E_middle_cerebral_L114" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.82E-03" name="l_middle_cerebral_L114" public_interface="out" units="metre"/>
+<variable initial_value="1.04E-03" name="r_middle_cerebral_L114" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_middle_cerebral_L114" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_middle_cerebral_L114" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_middle_cerebral_R52" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.82E-03" name="l_middle_cerebral_R52" public_interface="out" units="metre"/>
+<variable initial_value="1.04E-03" name="r_middle_cerebral_R52" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_middle_cerebral_R52" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_middle_cerebral_R52" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_anterior_cerebral_L110" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.06E-02" name="l_anterior_cerebral_L110" public_interface="out" units="metre"/>
+<variable initial_value="9.65E-04" name="r_anterior_cerebral_L110" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_anterior_cerebral_L110" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_anterior_cerebral_L110" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_anterior_cerebral_R46" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.06E-02" name="l_anterior_cerebral_R46" public_interface="out" units="metre"/>
+<variable initial_value="9.65E-04" name="r_anterior_cerebral_R46" public_interface="out" units="metre"/>
+<variable initial_value="90" name="theta_anterior_cerebral_R46" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_anterior_cerebral_R46" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.60E+06" name="E_anterior_cerebral_R238" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.15E-03" name="l_anterior_cerebral_R238" public_interface="out" units="metre"/>
+<variable initial_value="9.65E-04" name="r_anterior_cerebral_R238" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_anterior_cerebral_R238" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_anterior_cerebral_R238" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_anterior_cerebral_L42" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.15E-03" name="l_anterior_cerebral_L42" public_interface="out" units="metre"/>
+<variable initial_value="9.65E-04" name="r_anterior_cerebral_L42" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_anterior_cerebral_L42" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_anterior_cerebral_L42" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_anterior_communicating_C44" public_interface="out" units="J_per_m3"/>
+<variable initial_value="5.66E-03" name="l_anterior_communicating_C44" public_interface="out" units="metre"/>
+<variable initial_value="6.57E-04" name="r_anterior_communicating_C44" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_anterior_communicating_C44" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_anterior_communicating_C44" public_interface="out" units="dimensionless"/>
+<variable initial_value="8.00E+05" name="E_vertebral_L2" public_interface="out" units="J_per_m3"/>
+<variable initial_value="2.10E-01" name="l_vertebral_L2" public_interface="out" units="metre"/>
+<variable initial_value="1.34E-03" name="r_vertebral_L2" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_vertebral_L2" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_vertebral_L2" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_subclavian_R28" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.57E-02" name="l_subclavian_R28" public_interface="out" units="metre"/>
+<variable initial_value="4.52E-03" name="r_subclavian_R28" public_interface="out" units="metre"/>
+<variable initial_value="90" name="theta_subclavian_R28" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_subclavian_R28" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.00E+05" name="E_subclavian_R30" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.11E-02" name="l_subclavian_R30" public_interface="out" units="metre"/>
+<variable initial_value="3.32E-03" name="r_subclavian_R30" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_subclavian_R30" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_subclavian_R30" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_brachial_R34" public_interface="out" units="J_per_m3"/>
+<variable initial_value="2.23E-01" name="l_brachial_R34" public_interface="out" units="metre"/>
+<variable initial_value="1.97E-03" name="r_brachial_R34" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_brachial_R34" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_brachial_R34" public_interface="out" units="dimensionless"/>
+<variable initial_value="8.00E+05" name="E_vertebral_R272" public_interface="out" units="J_per_m3"/>
+<variable initial_value="2.10E-01" name="l_vertebral_R272" public_interface="out" units="metre"/>
+<variable initial_value="1.34E-03" name="r_vertebral_R272" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_vertebral_R272" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="theta_vertebral_R272" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_basilar_C4" public_interface="out" units="J_per_m3"/>
+<variable initial_value="2.26E-02" name="l_basilar_C4" public_interface="out" units="metre"/>
+<variable initial_value="1.72E-03" name="r_basilar_C4" public_interface="out" units="metre"/>
+<variable initial_value="90" name="theta_basilar_C4" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_basilar_C4" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.60E+06" name="E_posterior_cerebral_pre_L6" public_interface="out" units="J_per_m3"/>
+<variable initial_value="6.98E-03" name="l_posterior_cerebral_pre_L6" public_interface="out" units="metre"/>
+<variable initial_value="8.16E-04" name="r_posterior_cerebral_pre_L6" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_posterior_cerebral_pre_L6" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_posterior_cerebral_pre_L6" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_posterior_cerebral_post_L12" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.28E-02" name="l_posterior_cerebral_post_L12" public_interface="out" units="metre"/>
+<variable initial_value="8.69E-04" name="r_posterior_cerebral_post_L12" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_posterior_cerebral_post_L12" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_posterior_cerebral_post_L12" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_posterior_cerebral_pre_R204" public_interface="out" units="J_per_m3"/>
+<variable initial_value="7.78E-03" name="l_posterior_cerebral_pre_R204" public_interface="out" units="metre"/>
+<variable initial_value="8.16E-04" name="r_posterior_cerebral_pre_R204" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_posterior_cerebral_pre_R204" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_posterior_cerebral_pre_R204" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.60E+06" name="E_posterior_cerebral_post_R208" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.28E-02" name="l_posterior_cerebral_post_R208" public_interface="out" units="metre"/>
+<variable initial_value="8.69E-04" name="r_posterior_cerebral_post_R208" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_posterior_cerebral_post_R208" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_posterior_cerebral_post_R208" public_interface="out" units="dimensionless"/>
+<variable initial_value="12000000000" name="R_T_posterior_cerebral_L_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.00E-11" name="C_T_posterior_cerebral_L_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_posterior_cerebral_L_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_posterior_cerebral_L_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="Delta_R_posterior_cerebral_L_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="12000000000" name="R_T_posterior_cerebral_R_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.00E-11" name="C_T_posterior_cerebral_R_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_posterior_cerebral_R_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_posterior_cerebral_R_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="Delta_R_posterior_cerebral_R_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="4000000000" name="R_T_external_carotid_L_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="6.01E-11" name="C_T_external_carotid_L_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_external_carotid_L_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_external_carotid_L_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="Delta_R_external_carotid_L_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="4000000000" name="R_T_external_carotid_R_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="6.03E-11" name="C_T_external_carotid_R_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_external_carotid_R_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_external_carotid_R_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="Delta_R_external_carotid_R_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="4000000000" name="R_T_middle_cerebral_L_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.00E-11" name="C_T_middle_cerebral_L_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_middle_cerebral_L_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_middle_cerebral_L_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="Delta_R_middle_cerebral_L_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="4000000000" name="R_T_middle_cerebral_R_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.00E-11" name="C_T_middle_cerebral_R_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_middle_cerebral_R_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_middle_cerebral_R_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="Delta_R_middle_cerebral_R_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="6000000000" name="R_T_anterior_cerebral_L_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.00E-11" name="C_T_anterior_cerebral_L_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_anterior_cerebral_L_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_anterior_cerebral_L_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="Delta_R_anterior_cerebral_L_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="6000000000" name="R_T_anterior_cerebral_R_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.00E-11" name="C_T_anterior_cerebral_R_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_anterior_cerebral_R_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_anterior_cerebral_R_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0" name="Delta_R_anterior_cerebral_R_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="2000000000" name="R_T_arm_L_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.00E-10" name="C_T_arm_L_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_arm_L_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_arm_L_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="2000000000" name="R_T_arm_R_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.00E-10" name="C_T_arm_R_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_arm_R_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_arm_R_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="133642.1674" name="E_aortic_arch_C94" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.32E-02" name="l_aortic_arch_C94" public_interface="out" units="metre"/>
+<variable initial_value="1.17E-02" name="r_aortic_arch_C94" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_aortic_arch_C94" public_interface="out" units="J_per_m3"/>
+<variable initial_value="90" name="theta_aortic_arch_C94" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_thoracic_aorta_C96" public_interface="out" units="J_per_m3"/>
+<variable initial_value="9.90E-03" name="l_thoracic_aorta_C96" public_interface="out" units="metre"/>
+<variable initial_value="1.05E-02" name="r_thoracic_aorta_C96" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_thoracic_aorta_C96" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_thoracic_aorta_C96" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_thoracic_aorta_C100" public_interface="out" units="J_per_m3"/>
+<variable initial_value="7.88E-03" name="l_thoracic_aorta_C100" public_interface="out" units="metre"/>
+<variable initial_value="1.03E-02" name="r_thoracic_aorta_C100" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_thoracic_aorta_C100" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_thoracic_aorta_C100" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_thoracic_aorta_C104" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.56E-02" name="l_thoracic_aorta_C104" public_interface="out" units="metre"/>
+<variable initial_value="1.01E-02" name="r_thoracic_aorta_C104" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_thoracic_aorta_C104" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_thoracic_aorta_C104" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_thoracic_aorta_C108" public_interface="out" units="J_per_m3"/>
+<variable initial_value="5.33E-03" name="l_thoracic_aorta_C108" public_interface="out" units="metre"/>
+<variable initial_value="9.87E-03" name="r_thoracic_aorta_C108" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_thoracic_aorta_C108" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_thoracic_aorta_C108" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_thoracic_aorta_C112" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.22E-01" name="l_thoracic_aorta_C112" public_interface="out" units="metre"/>
+<variable initial_value="8.48E-03" name="r_thoracic_aorta_C112" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_thoracic_aorta_C112" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_thoracic_aorta_C112" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_abdominal_aorta_C114" public_interface="out" units="J_per_m3"/>
+<variable initial_value="3.25E-03" name="l_abdominal_aorta_C114" public_interface="out" units="metre"/>
+<variable initial_value="7.52E-03" name="r_abdominal_aorta_C114" public_interface="out" units="metre"/>
+<variable initial_value="180" name="theta_abdominal_aorta_C114" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_abdominal_aorta_C114" public_interface="out" units="J_per_m3"/>
+<variable initial_value="260869565.2" name="R_T_trunk_C_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="4.00E-09" name="C_T_trunk_C_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_trunk_C_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_trunk_C_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1" name="R_local_multiplier_trunk_C_T" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_abdominal_aorta_C136" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.40E-02" name="l_abdominal_aorta_C136" public_interface="out" units="metre"/>
+<variable initial_value="7.43E-03" name="r_abdominal_aorta_C136" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_abdominal_aorta_C136" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_abdominal_aorta_C136" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_abdominal_aorta_C164" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.32E-03" name="l_abdominal_aorta_C164" public_interface="out" units="metre"/>
+<variable initial_value="7.29E-03" name="r_abdominal_aorta_C164" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_abdominal_aorta_C164" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_abdominal_aorta_C164" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_abdominal_aorta_C176" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.20E-02" name="l_abdominal_aorta_C176" public_interface="out" units="metre"/>
+<variable initial_value="7.19E-03" name="r_abdominal_aorta_C176" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_abdominal_aorta_C176" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_abdominal_aorta_C176" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_abdominal_aorta_C188" public_interface="out" units="J_per_m3"/>
+<variable initial_value="5.41E-02" name="l_abdominal_aorta_C188" public_interface="out" units="metre"/>
+<variable initial_value="6.80E-03" name="r_abdominal_aorta_C188" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_abdominal_aorta_C188" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_abdominal_aorta_C188" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_abdominal_aorta_C192" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.22E-02" name="l_abdominal_aorta_C192" public_interface="out" units="metre"/>
+<variable initial_value="6.12E-03" name="r_abdominal_aorta_C192" public_interface="out" units="metre"/>
+<variable initial_value="180" name="theta_abdominal_aorta_C192" public_interface="out" units="dimensionless"/>
+<variable initial_value="0" name="u_ext_abdominal_aorta_C192" public_interface="out" units="J_per_m3"/>
+<variable initial_value="4.00E+05" name="E_common_iliac_L194" public_interface="out" units="J_per_m3"/>
+<variable initial_value="7.41E-02" name="l_common_iliac_L194" public_interface="out" units="metre"/>
+<variable initial_value="4.28E-03" name="r_common_iliac_L194" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_common_iliac_L194" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_common_iliac_L194" public_interface="out" units="dimensionless"/>
+<variable initial_value="8.00E+05" name="E_external_iliac_L198" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.02E-01" name="l_external_iliac_L198" public_interface="out" units="metre"/>
+<variable initial_value="3.29E-03" name="r_external_iliac_L198" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_external_iliac_L198" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_external_iliac_L198" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.00E+05" name="E_common_iliac_R216" public_interface="out" units="J_per_m3"/>
+<variable initial_value="7.64E-02" name="l_common_iliac_R216" public_interface="out" units="metre"/>
+<variable initial_value="4.31E-03" name="r_common_iliac_R216" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_common_iliac_R216" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_common_iliac_R216" public_interface="out" units="dimensionless"/>
+<variable initial_value="8.00E+05" name="E_external_iliac_R220" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.02E-01" name="l_external_iliac_R220" public_interface="out" units="metre"/>
+<variable initial_value="3.29E-03" name="r_external_iliac_R220" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_external_iliac_R220" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_external_iliac_R220" public_interface="out" units="dimensionless"/>
+<variable initial_value="8.00E+05" name="E_femoral_L200" public_interface="out" units="J_per_m3"/>
+<variable initial_value="3.16E-02" name="l_femoral_L200" public_interface="out" units="metre"/>
+<variable initial_value="3.17E-03" name="r_femoral_L200" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_femoral_L200" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_femoral_L200" public_interface="out" units="dimensionless"/>
+<variable initial_value="8.00E+05" name="E_femoral_R222" public_interface="out" units="J_per_m3"/>
+<variable initial_value="3.16E-02" name="l_femoral_R222" public_interface="out" units="metre"/>
+<variable initial_value="3.17E-03" name="r_femoral_R222" public_interface="out" units="metre"/>
+<variable initial_value="0" name="u_ext_femoral_R222" public_interface="out" units="J_per_m3"/>
+<variable initial_value="180" name="theta_femoral_R222" public_interface="out" units="dimensionless"/>
+<variable initial_value="1000000000" name="R_T_leg_L_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="4.00E-10" name="C_T_leg_L_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_leg_L_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_leg_L_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1000000000" name="R_T_leg_R_T" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="4.00E-10" name="C_T_leg_R_T" public_interface="out" units="m6_per_J"/>
+<variable initial_value="1.00E-06" name="I_T_leg_R_T" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="0" name="u_ext_leg_R_T" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.07E-05" name="R_venous_lb" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.07E-05" name="C_venous_lb" public_interface="out" units="m6_per_J"/>
+<variable initial_value="0" name="u_ext_venous_lb" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.00E-07" name="I_venous_lb" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="1e-4" name="q_C_init_venous_lb" public_interface="out" units="m3"/>
+<variable initial_value="9.00E-04" name="q_us_0_venous_lb" public_interface="out" units="m3"/>
+<variable initial_value="1.00E-07" name="R_venous_ub" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.07E-05" name="C_venous_ub" public_interface="out" units="m6_per_J"/>
+<variable initial_value="0" name="u_ext_venous_ub" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.00E-07" name="I_venous_ub" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="1e-4" name="q_C_init_venous_ub" public_interface="out" units="m3"/>
+<variable initial_value="9.00E-04" name="q_us_0_venous_ub" public_interface="out" units="m3"/>
+<variable initial_value="1.00E-07" name="R_venous_ivc" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.07E-05" name="C_venous_ivc" public_interface="out" units="m6_per_J"/>
+<variable initial_value="0" name="u_ext_venous_ivc" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.00E-07" name="I_venous_ivc" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="1e-4" name="q_C_init_venous_ivc" public_interface="out" units="m3"/>
+<variable initial_value="3.50E-04" name="q_us_0_venous_ivc" public_interface="out" units="m3"/>
+<variable initial_value="1.00E-07" name="R_venous_svc" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="1.07E-05" name="C_venous_svc" public_interface="out" units="m6_per_J"/>
+<variable initial_value="0" name="u_ext_venous_svc" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.00E-07" name="I_venous_svc" public_interface="out" units="Js2_per_m6"/>
+<variable initial_value="1e-4" name="q_C_init_venous_svc" public_interface="out" units="m3"/>
+<variable initial_value="3.50E-04" name="q_us_0_venous_svc" public_interface="out" units="m3"/>
+<variable initial_value="1.64E-04" name="q_0_middle_cerebral_L_GE" public_interface="out" units="m3"/>
+<variable initial_value="1.44e-07" name="M_CO2_middle_cerebral_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-1.80E-07" name="M_O2_middle_cerebral_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="1.64E-04" name="q_0_middle_cerebral_R_GE" public_interface="out" units="m3"/>
+<variable initial_value="1.44e-07" name="M_CO2_middle_cerebral_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-1.80E-07" name="M_O2_middle_cerebral_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="1.64E-04" name="q_0_anterior_cerebral_L_GE" public_interface="out" units="m3"/>
+<variable initial_value="9.6e-08" name="M_CO2_anterior_cerebral_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-1.20E-07" name="M_O2_anterior_cerebral_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="1.64E-04" name="q_0_anterior_cerebral_R_GE" public_interface="out" units="m3"/>
+<variable initial_value="9.6e-08" name="M_CO2_anterior_cerebral_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-1.20E-07" name="M_O2_anterior_cerebral_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="1.64E-04" name="q_0_posterior_cerebral_L_GE" public_interface="out" units="m3"/>
+<variable initial_value="4.8e-08" name="M_CO2_posterior_cerebral_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-6.00E-08" name="M_O2_posterior_cerebral_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="1.64E-04" name="q_0_posterior_cerebral_R_GE" public_interface="out" units="m3"/>
+<variable initial_value="4.8e-08" name="M_CO2_posterior_cerebral_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-6.00E-08" name="M_O2_posterior_cerebral_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="1.64E-04" name="q_0_external_carotid_L_GE" public_interface="out" units="m3"/>
+<variable initial_value="1.44e-07" name="M_CO2_external_carotid_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-1.80E-07" name="M_O2_external_carotid_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="1.64E-04" name="q_0_external_carotid_R_GE" public_interface="out" units="m3"/>
+<variable initial_value="1.44e-07" name="M_CO2_external_carotid_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-1.80E-07" name="M_O2_external_carotid_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="5.60E-03" name="q_0_arm_L_GE" public_interface="out" units="m3"/>
+<variable initial_value="2.16e-07" name="M_CO2_arm_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-2.70E-07" name="M_O2_arm_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="5.60E-03" name="q_0_arm_R_GE" public_interface="out" units="m3"/>
+<variable initial_value="2.16e-07" name="M_CO2_arm_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-2.70E-07" name="M_O2_arm_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="1.00E-02" name="q_0_leg_L_GE" public_interface="out" units="m3"/>
+<variable initial_value="4.32e-07" name="M_CO2_leg_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-5.40E-07" name="M_O2_leg_L_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="1.00E-02" name="q_0_leg_R_GE" public_interface="out" units="m3"/>
+<variable initial_value="4.32e-07" name="M_CO2_leg_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-5.40E-07" name="M_O2_leg_R_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="2.67E-03" name="q_0_trunk_C_GE" public_interface="out" units="m3"/>
+<variable initial_value="1.656e-06" name="M_CO2_trunk_C_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="-2.07E-06" name="M_O2_trunk_C_GE" public_interface="out" units="m3_per_s"/>
+<variable initial_value="3.00E-04" name="q_0_arterial_gas_transport" public_interface="out" units="m3"/>
+<variable initial_value="3.00E-04" name="q_0_venous_gas_transport" public_interface="out" units="m3"/>
+<variable initial_value="12399" name="P_baro_init_common_carotid_L_baro" public_interface="out" units="J_per_m3"/>
+<variable initial_value="1.2E+04" name="P_nom_common_carotid_L_baro" public_interface="out" units="J_per_m3"/>
+<variable initial_value="6.37" name="tau_zb_common_carotid_L_baro" public_interface="out" units="second"/>
+<variable initial_value="2.076" name="tau_pb_common_carotid_L_baro" public_interface="out" units="second"/>
+<variable initial_value="2.52" name="f_ab_min_common_carotid_L_baro" public_interface="out" units="per_s"/>
+<variable initial_value="47.78" name="f_ab_max_common_carotid_L_baro" public_interface="out" units="per_s"/>
+<variable initial_value="1700" name="k_ab_common_carotid_L_baro" public_interface="out" units="J_per_m3"/>
+<variable initial_value="600" name="AA_arterial_chemoreceptor" public_interface="out" units="dimensionless"/>
+<variable initial_value="10.18" name="BB_arterial_chemoreceptor" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.34" name="C_CO2_a_nom_arterial_chemoreceptor" public_interface="out" units="dimensionless"/>
+<variable initial_value="200" name="K_O2_arterial_chemoreceptor" public_interface="out" units="dimensionless"/>
+<variable initial_value="1" name="K_CO2_arterial_chemoreceptor" public_interface="out" units="per_s"/>
+<variable initial_value="20" name="K_stat_arterial_chemoreceptor" public_interface="out" units="per_s"/>
+<variable initial_value="45" name="K_dyn_arterial_chemoreceptor" public_interface="out" units="per_s"/>
+<variable initial_value="3.5" name="tau_cap_arterial_chemoreceptor" public_interface="out" units="second"/>
+<variable initial_value="600" name="tau_CO2_cc_dyn_arterial_chemoreceptor" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.4" name="f_apc_nom_central_chemo_resp_integration" public_interface="out" units="per_s"/>
+<variable initial_value="1" name="K_c_resp_central_chemo_resp_integration" public_interface="out" units="m3_per_Js"/>
+<variable initial_value="1" name="K_p_resp_central_chemo_resp_integration" public_interface="out" units="dimensionless"/>
+<variable initial_value="-300" name="G_pA_resp_effector" public_interface="out" units="Js_per_m3"/>
+<variable initial_value="0" name="G_pf_resp_effector" public_interface="out" units="dimensionless"/>
+<variable initial_value="10" name="tau_pA_min_resp_effector" public_interface="out" units="second"/>
+<variable initial_value="83" name="tau_pA_max_resp_effector" public_interface="out" units="second"/>
+<variable initial_value="17.526" name="tau_pf_min_resp_effector" public_interface="out" units="second"/>
+<variable initial_value="174.78" name="tau_pf_max_resp_effector" public_interface="out" units="second"/>
+<variable initial_value="1" name="G_cA_max_resp_effector" public_interface="out" units="Js_per_m3"/>
+<variable initial_value="0" name="G_cf_max_resp_effector" public_interface="out" units="dimensionless"/>
+<variable initial_value="30" name="tau_cA_min_resp_effector" public_interface="out" units="second"/>
+<variable initial_value="105" name="tau_cA_max_resp_effector" public_interface="out" units="second"/>
+<variable initial_value="35" name="tau_cf_min_resp_effector" public_interface="out" units="second"/>
+<variable initial_value="400" name="tau_cf_max_resp_effector" public_interface="out" units="second"/>
+<variable initial_value="6666" name="P_CO2_c_thresh_resp_effector" public_interface="out" units="J_per_m3"/>
+<variable initial_value="2" name="tau_lung_lung_stretch" public_interface="out" units="second"/>
+<variable initial_value="23.291" name="G_al_lung_stretch" public_interface="out" units="per_ml_s"/>
+<variable initial_value="2" name="tau_cp_cardiopulm_receptor" public_interface="out" units="second"/>
+<variable initial_value="0" name="P_l_init_cardiopulm_receptor" public_interface="out" units="J_per_m3"/>
+<variable initial_value="20" name="f_maxl_cardiopulm_receptor" public_interface="out" units="Hz"/>
+<variable initial_value="1440" name="P_tn_cardiopulm_receptor" public_interface="out" units="J_per_m3"/>
+<variable initial_value="190.47809" name="k_l_cardiopulm_receptor" public_interface="out" units="J_per_m3"/>
+<variable initial_value="0.304" name="f_min_br_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="21.499" name="f_max_br_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="44.125" name="f_mid_br_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="2.75" name="f_min_ls_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="31.569" name="f_max_ls_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="0.13" name="f_mid_ls_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="0.451" name="f_min_cp_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="28.327" name="f_max_cp_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="20.2" name="f_mid_cp_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="2.2343941" name="f_min_ch_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="25" name="f_max_ch_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="0.05" name="f_mid_ch_NTS" public_interface="out" units="Hz"/>
+<variable initial_value="21" name="k_NTS_br_NTS" public_interface="out" units="dimensionless"/>
+<variable initial_value="2" name="k_NTS_ls_NTS" public_interface="out" units="dimensionless"/>
+<variable initial_value="7" name="k_NTS_cp_NTS" public_interface="out" units="dimensionless"/>
+<variable initial_value="1" name="k_NTS_ch_NTS" public_interface="out" units="dimensionless"/>
+<variable initial_value="2.59" name="f_min_DMV_DMV" public_interface="out" units="Hz"/>
+<variable initial_value="6.66" name="f_max_DMV_DMV" public_interface="out" units="Hz"/>
+<variable initial_value="42.91" name="f_mid_DMV_DMV" public_interface="out" units="Hz"/>
+<variable initial_value="33.5" name="k_DMV_DMV" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.88" name="f_min_NA_NA" public_interface="out" units="Hz"/>
+<variable initial_value="15.78" name="f_max_NA_NA" public_interface="out" units="Hz"/>
+<variable initial_value="30" name="f_mid_NA_NA" public_interface="out" units="Hz"/>
+<variable initial_value="0.5" name="k_RSA_NA" public_interface="out" units="dimensionless"/>
+<variable initial_value="23" name="k_NA_NA" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.2" name="s_NA" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.61" name="f_min_NActr_NActr" public_interface="out" units="Hz"/>
+<variable initial_value="11" name="f_max_NActr_NActr" public_interface="out" units="Hz"/>
+<variable initial_value="12.81" name="f_mid_NActr_NActr" public_interface="out" units="Hz"/>
+<variable initial_value="23" name="k_NActr_NActr" public_interface="out" units="dimensionless"/>
+<variable initial_value="1.25E+00" name="f_min_LCN_LCN" public_interface="out" units="Hz"/>
+<variable initial_value="3.05E+01" name="f_max_LCN_LCN" public_interface="out" units="Hz"/>
+<variable initial_value="7.37E+02" name="f_mid_LCN_LCN" public_interface="out" units="Hz"/>
+<variable initial_value="4.47E+00" name="k_evEmax_gainLCN_LCN" public_interface="out" units="dimensionless"/>
+<variable initial_value="2.49E+00" name="k_br_gainLCN_LCN" public_interface="out" units="dimensionless"/>
+<variable initial_value="5.94E-02" name="k_esh_gainLCN_LCN" public_interface="out" units="dimensionless"/>
+<variable initial_value="6.95E+00" name="k_cp_gainLCN_LCN" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.32E+00" name="k_LCN_LCN" public_interface="out" units="dimensionless"/>
+<variable initial_value="6.39E-01" name="f_min_PNNA_PNNA" public_interface="out" units="Hz"/>
+<variable initial_value="1.79E+01" name="f_max_PNNA_PNNA" public_interface="out" units="Hz"/>
+<variable initial_value="1.05E+01" name="f_mid_PNNA_PNNA" public_interface="out" units="Hz"/>
+<variable initial_value="1.98E+00" name="k_PNNA_PNNA" public_interface="out" units="dimensionless"/>
+<variable initial_value="4.35E+00" name="f_min_PNDMV_PNDMV" public_interface="out" units="Hz"/>
+<variable initial_value="2.82E+01" name="f_max_PNDMV_PNDMV" public_interface="out" units="Hz"/>
+<variable initial_value="2.84E+01" name="f_mid_PNDMV_PNDMV" public_interface="out" units="Hz"/>
+<variable initial_value="2.38E+01" name="k_PNDMV_PNDMV" public_interface="out" units="dimensionless"/>
+<variable initial_value="2.53E+00" name="tau_PNDMV_PNDMV" public_interface="out" units="second"/>
+<variable initial_value="-1.5" name="W_bs_sympathetic_efferent" public_interface="out" units="dimensionless"/>
+<variable initial_value="10" name="W_cs_sympathetic_efferent" public_interface="out" units="dimensionless"/>
+<variable initial_value="6.56E+07" name="G_theta_trunk_resistance_effector" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="6" name="tau_theta_trunk_resistance_effector" public_interface="out" units="second"/>
+<variable initial_value="2.27E+08" name="G_theta_arm_leg_resistance_effector" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="6" name="tau_theta_arm_leg_resistance_effector" public_interface="out" units="second"/>
+<variable initial_value="1.0e7" name="G_Es_lv_elastance_effector" public_interface="out" units="J_per_m6"/>
+<variable initial_value="2" name="tau_Es_lv_elastance_effector" public_interface="out" units="second"/>
+<variable initial_value="-5.00E+06" name="G_Ev_lv_elastance_effector" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="0.2" name="tau_Ev_lv_elastance_effector" public_interface="out" units="second"/>
+<variable initial_value="1" name="scale_lv_elastance_effector" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.5e7" name="G_Es_rv_elastance_effector" public_interface="out" units="J_per_m6"/>
+<variable initial_value="2" name="tau_Es_rv_elastance_effector" public_interface="out" units="second"/>
+<variable initial_value="-2.50E+06" name="G_Ev_rv_elastance_effector" public_interface="out" units="Js_per_m6"/>
+<variable initial_value="0.2" name="tau_Ev_rv_elastance_effector" public_interface="out" units="second"/>
+<variable initial_value="0.5903" name="scale_rv_elastance_effector" public_interface="out" units="dimensionless"/>
+<variable initial_value="0.055279" name="G_Ts_heart_period_effector" public_interface="out" units="second"/>
+<variable initial_value="0.05" name="G_Tv_heart_period_effector" public_interface="out" units="second"/>
+<variable initial_value="2" name="tau_Ts_heart_period_effector" public_interface="out" units="second"/>
+<variable initial_value="1.5" name="tau_Tv_heart_period_effector" public_interface="out" units="second"/>
+<variable initial_value="-2.00E-04" name="G_theta_us_venous_constriction_effector" public_interface="out" units="m3"/>
+<variable initial_value="-6.21E-07" name="G_theta_compliance_venous_constriction_effector" public_interface="out" units="m6_per_J"/>
+<variable initial_value="20" name="tau_theta_us_venous_constriction_effector" public_interface="out" units="second"/>
+<variable initial_value="20" name="tau_theta_compliance_venous_constriction_effector" public_interface="out" units="second"/>
+</component>
+</model>

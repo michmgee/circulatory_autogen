@@ -8,7 +8,7 @@ C_pcap,m6_per_J,1.00E-12,small_chosen
 u_ext_pcap,J_per_m3,0,user_defined
 I_pcap,Js2_per_m6,1.00E-06,small_chosen
 q_0_pulmonary_GE,m3,2.00E-03,user_defined
-k_O2_pulmonary_GE,m6_per_Js,2.85E-10,Bizzotto2022
+k_O2_pulmonary_GE,m6_per_Js,1.80E-08,Bizzotto2022_originally0.000000000285
 k_CO2_pulmonary_GE,m6_per_Js,8.20E-09,Bizzotto2022
 shunt_fraction_pulmonary_GE,dimensionless,0.017,GuytonAndHall2006
 k_1,J_per_m3,1998.5,Spencer1979
