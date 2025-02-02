@@ -45,7 +45,6 @@
     <units name="mm3_per_s" units_ref="mm3_per_s"/>
     <units name="l_per_s" units_ref="l_per_s"/>
     <units name="per_ml_s" units_ref="per_ml_s"/>
-    <units name="per_m3_s" units_ref="per_m3_s"/>
     <units name="J_per_mol" units_ref="J_per_mol"/>
     <units name="J_per_kmol_K" units_ref="J_per_kmol_K"/>
     <units name="J_per_M" units_ref="J_per_M"/>
@@ -148,12 +147,14 @@
     <units name="m3_per_M_millis" units_ref="m3_per_M_millis"/>
     <units name="m3_per_millimol_s" units_ref="m3_per_millimol_s"/>
     <units name="millimol_per_m3" units_ref="millimol_per_m3"/>
-    <units name="per_s2" units_ref="per_s2"/>
     <units name="Hz2" units_ref="Hz2"/>
     <units name="cm" units_ref="cm"/>
     <units name="J_per_m4_s" units_ref="J_per_m4_s"/>
     <units name="m3_per_mol_per_sec" units_ref="m3_per_mol_per_sec"/>
     <units name="mol_per_m3_per_kPa" units_ref="mol_per_m3_per_kPa"/>
+    <units name="mol_per_m3_per_Pa" units_ref="mol_per_m3_per_Pa"/>
+    <units name="m3_per_mol_per_s" units_ref="m3_per_mol_per_s"/>
+    <units name="mol_per_m3_per_s" units_ref="mol_per_m3_per_s"/>
 </import>
 <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;imports&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;//-->
 <import xlink:href="control_parasymp_modules.cellml">
