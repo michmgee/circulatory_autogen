@@ -1113,7 +1113,12 @@
         <variable name="C_O2_p" public_interface="in" units="dimensionless"/>
         <variable name="P_CO2_a" public_interface="out" units="J_per_m3"/>
         <variable name="R_local_multiplier" public_interface="out" units="dimensionless"/>
+<<<<<<< Updated upstream
         <variable name="P_O2_a" public_interface="out" units="J_per_m3"/>
+=======
+        <variable name="P_O2_a" public_interface="in" units="J_per_m3"/>
+        <variable name="P_CO2_a_temp" public_interface="out" units="J_per_m3"/>
+>>>>>>> Stashed changes
         <!-- Constants-->
         <variable name="P_CO2_a_nom" public_interface="in" units="J_per_m3"/>
         <variable name="k_CO2_m" public_interface="in" units="J_per_m3"/>
@@ -1230,6 +1235,7 @@
                     </apply>
                 </apply>
             </apply>
+<<<<<<< Updated upstream
             <!-- from inverted dissociation-->
             <apply>
                 <eq/>
@@ -1517,6 +1523,12 @@
                         </apply>
                     </apply>
                 </apply>
+=======
+            <apply>
+                <eq/>
+                <ci>P_CO2_a_temp</ci>
+                <ci>P_CO2_a</ci>
+>>>>>>> Stashed changes
             </apply>
         </math>
     </component>

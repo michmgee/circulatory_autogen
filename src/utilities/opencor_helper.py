@@ -2,6 +2,17 @@ import opencor as oc
 import numpy as np
 import os
 import sys
+<<<<<<< Updated upstream
+=======
+from importlib import import_module # Only used for debugging
+
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
+
+print(sys.path)
+from utilities.utility_funcs import get_size
+>>>>>>> Stashed changes
 # from func_timeout import func_timeout, FunctionTimedOut
 
 class SimulationHelper():
@@ -38,13 +49,25 @@ class SimulationHelper():
             print("Failed to converge")
             print('restarting simulation object')
             self.simulation.reset()
+<<<<<<< Updated upstream
+=======
+            #self.simulation.release_all_values()
+>>>>>>> Stashed changes
             self.simulation.clear_results()
             return False
 
         return True
 
+<<<<<<< Updated upstream
     def reset_and_clear(self):
         self.simulation.reset()
+=======
+    def reset_and_clear(self, only_one_exp=-1):
+        # mem = self.process_memory()
+        # print(f'memory_pre_clear={mem}')
+        self.simulation.reset(True)
+        #self.simulation.release_all_values()
+>>>>>>> Stashed changes
         self.simulation.clear_results()
 
     def get_results(self, variables_list_of_lists, flatten=False):
@@ -122,6 +145,9 @@ class SimulationHelper():
 
     def set_param_vals(self, param_names, param_vals):
         # ensure param_vals stores state values first, then constant values
+        print('param_vals: ',param_vals)
+        print('param_names: ', param_names)
+        print('This is line 166 in ./src/utilities/opencor_helper.py')
         for JJ, param_name_or_list in enumerate(param_names):
             if isinstance(param_name_or_list, list):
                 for param_name in param_name_or_list:

@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<model name="modules" xmlns="http://www.cellml.org/cellml/1.1#" xmlns:cellml="http://www.cellml.org/cellml/1.1#">
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////// //////////////////modules for debugging ///////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <component name="step_cardiopulm_receptor">
+        <!-- Constitutive parameters-->
+        <variable initial_value="3" name="u_out" public_interface="out" units="J_per_m3"/>
+        <!-- cardiopulm_receptor-->
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>u_out</ci>
+                <cn cellml:units="J_per_m3">3</cn>
+            </apply>
+        </math>
+    </component>
+    <component name="step_gas_transport">
+        <!-- all module outputs need to be used-->
+        <variable name="t" public_interface="in" units="second"/>
+        <!-- Constitutive parameters-->
+        <variable initial_value="3" name="v" public_interface="out" units="m3_per_s"/>
+        <!-- pulmonary_GE-->
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>v</ci>
+                <apply>
+                    <divide/>
+                    <cn cellml:units="m3">3</cn>
+                    <ci>t</ci>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="step_pulmonary_GE">
+        <!-- all module outputs need to be used-->
+        <variable name="t" public_interface="in" units="second"/>
+        <!-- Constitutive parameters-->
+        <variable name="v" public_interface="out" units="m3_per_s"/>
+        <!-- pulmonary_GE-->
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>v</ci>
+                <apply>
+                    <divide/>
+                    <cn cellml:units="m3">3</cn>
+                    <ci>t</ci>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="step_baro">
+        <!-- Step input for pvn-->
+        <variable name="t" public_interface="in" units="second"/>
+        <!-- Constitutive parameters-->
+        <variable initial_value="4" name="P_sys" public_interface="out" units="J_per_m3"/>
+        <variable name="t_start" public_interface="in" units="second"/>
+        <variable name="u_min" public_interface="in" units="J_per_m3"/>
+        <variable name="u_max" public_interface="in" units="J_per_m3"/>
+        <variable initial_value="1" name="dP_sys_dt" public_interface="out" units="J_per_m3s"/>
+        <variable name="dP_sys_dt_max" public_interface="in" units="J_per_m3s"/>
+        <variable name="dP_sys_dt_min" public_interface="in" units="J_per_m3s"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>P_sys</ci>
+                <piecewise>
+                    <piece>
+                        <ci>u_max</ci>
+                        <apply>
+                            <geq/>
+                            <ci>t</ci>
+                            <ci>t_start</ci>
+                        </apply>
+                    </piece>
+                    <otherwise>
+                        <ci>u_min</ci>
+                    </otherwise>
+                </piecewise>
+            </apply>
+            <apply>
+                <eq/>
+                <ci>dP_sys_dt</ci>
+                <piecewise>
+                    <piece>
+                        <ci>dP_sys_dt_max</ci>
+                        <apply>
+                            <geq/>
+                            <ci>t</ci>
+                            <ci>t_start</ci>
+                        </apply>
+                    </piece>
+                    <otherwise>
+                        <ci>dP_sys_dt_min</ci>
+                    </otherwise>
+                </piecewise>
+            </apply>
+        </math>
+    </component>
+    <component name="step_vp">
+        <!-- Step input for pvn-->
+        <variable name="t" public_interface="in" units="second"/>
+        <!-- Constitutive parameters-->
+        <variable initial_value="5" name="u_out" public_interface="out" units="J_per_m3"/>
+        <variable name="t_start" public_interface="in" units="second"/>
+        <variable initial_value="5" name="u_min" public_interface="out" units="J_per_m3"/>
+        <variable initial_value="6" name="u_max" public_interface="out" units="J_per_m3"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>u_out</ci>
+                <piecewise>
+                    <piece>
+                        <ci>u_max</ci>
+                        <apply>
+                            <geq/>
+                            <ci>t</ci>
+                            <ci>t_start</ci>
+                        </apply>
+                    </piece>
+                    <otherwise>
+                        <ci>u_min</ci>
+                    </otherwise>
+                </piecewise>
+            </apply>
+        </math>
+    </component>
+    <component name="step_tissue_GE">
+        <!-- step input for lb_GE and ub_GE-->
+        <variable name="t" public_interface="in" units="second"/>
+        <!-- Constitutive parameters-->
+        <variable name="t_start" public_interface="in" units="second"/>
+        <variable name="C_O2_min" public_interface="in" units="dimensionless"/>
+        <variable name="C_O2_max" public_interface="in" units="dimensionless"/>
+        <variable name="C_CO2_min" public_interface="in" units="dimensionless"/>
+        <variable name="C_CO2_max" public_interface="in" units="dimensionless"/>
+        <variable name="C_O2_p" public_interface="out" units="dimensionless"/>
+        <variable name="C_CO2_p" public_interface="out" units="dimensionless"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>C_O2_p</ci>
+                <piecewise>
+                    <piece>
+                        <ci>C_O2_max</ci>
+                        <apply>
+                            <geq/>
+                            <ci>t</ci>
+                            <ci>t_start</ci>
+                        </apply>
+                    </piece>
+                    <otherwise>
+                        <ci>C_O2_min</ci>
+                    </otherwise>
+                </piecewise>
+            </apply>
+            <apply>
+                <eq/>
+                <ci>C_CO2_p</ci>
+                <piecewise>
+                    <piece>
+                        <ci>C_CO2_max</ci>
+                        <apply>
+                            <geq/>
+                            <ci>t</ci>
+                            <ci>t_start</ci>
+                        </apply>
+                    </piece>
+                    <otherwise>
+                        <ci>C_CO2_min</ci>
+                    </otherwise>
+                </piecewise>
+            </apply>
+        </math>
+    </component>
+</model>

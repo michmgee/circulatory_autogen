@@ -63,9 +63,40 @@
         <variable name="q_t_us" public_interface="in" units="m3"/>
         <variable name="q_b_us" public_interface="in" units="m3"/>
         <variable name="q_A_us" public_interface="in" units="m3"/>
+<<<<<<< Updated upstream
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
                 <eq/>
+=======
+        <!-- flags to turn control on and off-->
+        <variable name="flag_RR_control" public_interface="in" units="dimensionless"/>
+        <variable name="flag_P_mus_control" public_interface="in" units="dimensionless"/>
+        <!-- TODO check this doesn't cause issues. -->
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>T_resp_wCont</ci>
+                <apply>
+                    <divide/>
+                    <cn cellml:units="dimensionless">1</cn>
+                    <apply>
+                        <plus/>
+                        <apply>
+                            <divide/>
+                            <cn cellml:units="dimensionless">1</cn>
+                            <ci>T_resp</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>flag_RR_control</ci>
+                            <ci>Delta_RR_resp</ci>
+                        </apply>
+                    </apply>
+                </apply>
+            </apply>
+            <apply>
+                <eq/>
+>>>>>>> Stashed changes
                 <ci>T_E</ci>
                 <apply>
                     <divide/>
@@ -360,6 +391,22 @@
             <!-- TODO swap this muscle model for the one used in ben tal and smith 2008-->
             <apply>
                 <eq/>
+<<<<<<< Updated upstream
+=======
+                <ci>P_mus_min_wCont</ci>
+                <apply>
+                    <plus/>
+                    <ci>P_mus_min</ci>
+                    <apply>
+                        <times/>
+                        <ci>flag_P_mus_control</ci>
+                        <ci>Delta_P_mus</ci>
+                    </apply>
+                </apply>
+            </apply>
+            <apply>
+                <eq/>
+>>>>>>> Stashed changes
                 <ci>P_mus</ci>
                 <piecewise>
                     <piece>
